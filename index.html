@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heartland Mile | Songs for the Long Road Home</title>
+  <meta name="description" content="Heartland Mile is a Chicagoland roots rock and Americana band led by award-winning songwriter Sean Heffernan. Originals, road-worn classics, and songs made for a room full of people." />
+  <meta property="og:title" content="Heartland Mile" />
+  <meta property="og:description" content="Songs for the Long Road Home. Chicagoland roots rock, Americana, originals and road-worn classics." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#152b36" />
+  <style>
+    :root{
+      --ink:#10242d;
+      --navy:#173541;
+      --cream:#f3ead6;
+      --paper:#e9ddc5;
+      --rust:#a84e2a;
+      --gold:#c28b3a;
+      --muted:#b9b09f;
+      --white:#fffdf7;
+      --shadow:0 18px 60px rgba(0,0,0,.24);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    .topbar{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(16,36,45,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.09)}
+    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;color:var(--cream)}
+    .brand{font-weight:900;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-size:1rem}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:.9rem;font-weight:700}
+    .navlinks a{text-decoration:none;opacity:.9}.navlinks a:hover{opacity:1}
+    .nav-cta{border:1px solid var(--gold);padding:9px 13px;border-radius:999px}
+
+    .hero{min-height:760px;display:grid;place-items:center;padding:118px 0 70px;position:relative;overflow:hidden;color:var(--cream);background:
+      radial-gradient(circle at 82% 18%, rgba(194,139,58,.25), transparent 25%),
+      linear-gradient(180deg, rgba(10,29,37,.05), rgba(10,29,37,.78)),
+      repeating-linear-gradient(97deg, rgba(255,255,255,.025) 0 1px, transparent 1px 7px),
+      linear-gradient(135deg,#102a35 0%,#1d4652 48%,#0f252e 100%)}
+    .hero:before{content:"";position:absolute;width:800px;height:800px;border:2px solid rgba(243,234,214,.08);border-radius:50%;right:-340px;bottom:-480px;box-shadow:0 0 0 60px rgba(243,234,214,.018),0 0 0 120px rgba(243,234,214,.012)}
+    .road{position:absolute;left:0;right:0;bottom:0;height:110px;background:linear-gradient(175deg,transparent 0 35%,rgba(0,0,0,.28) 36% 100%)}
+    .road:after{content:"";position:absolute;width:45%;height:4px;background:var(--gold);left:28%;bottom:35px;transform:perspective(300px) rotateX(66deg);opacity:.75}
+    .hero-inner{position:relative;z-index:2;text-align:center;max-width:900px}
+    .kicker{font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;font-weight:800;color:#e0b76f;margin-bottom:20px}
+    h1{font-family:Georgia,'Times New Roman',serif;text-transform:uppercase;font-size:clamp(4rem,12vw,9.2rem);line-height:.82;letter-spacing:-.055em;margin:0;text-shadow:0 4px 30px rgba(0,0,0,.28)}
+    .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.15rem,2.6vw,1.7rem);margin:28px 0 12px;color:#f0d9ae}
+    .hero-copy{max-width:700px;margin:0 auto 28px;font-size:1.05rem;color:#e7dfd1}
+    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.82rem;padding:14px 18px;border-radius:4px;border:1px solid transparent}
+    .btn-primary{background:var(--rust);color:#fff}.btn-primary:hover{filter:brightness(1.08)}
+    .btn-ghost{border-color:rgba(243,234,214,.5);color:var(--cream);background:rgba(255,255,255,.04)}
+
+    section{padding:88px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:900;color:var(--rust);margin:0 0 10px}
+    h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.3rem,5vw,4rem);line-height:1;margin:0 0 22px;color:var(--ink)}
+    .lead{font-size:1.15rem;max-width:760px;color:#354951}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .poster-card{background:var(--navy);color:var(--cream);min-height:450px;padding:42px;position:relative;box-shadow:var(--shadow);border:10px solid #d7c6a7;outline:1px solid rgba(0,0,0,.35)}
+    .poster-card:after{content:"CHICAGO • ILLINOIS";position:absolute;bottom:26px;left:42px;right:42px;border-top:1px solid rgba(243,234,214,.32);padding-top:18px;letter-spacing:.18em;font-size:.72rem;font-weight:800;color:#e0b76f}
+    .poster-title{font-family:Georgia,'Times New Roman',serif;font-size:3.35rem;line-height:.88;text-transform:uppercase;margin:0 0 18px}
+    .poster-list{list-style:none;padding:0;margin:28px 0 0}.poster-list li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.11);font-weight:700}
+
+    .video-sec{background:var(--ink);color:var(--cream)}
+    .video-sec h2{color:var(--cream)}.video-sec .eyebrow{color:#e0b76f}.video-sec .lead{color:#d8d0c2}
+    .video-grid{display:grid;grid-template-columns:1.45fr .55fr;gap:30px;margin-top:34px;align-items:stretch}
+    .video-frame{aspect-ratio:16/9;background:#000;box-shadow:var(--shadow)}
+    .video-frame iframe{width:100%;height:100%;border:0;display:block}
+    .video-note{border:1px solid rgba(243,234,214,.2);padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.035)}
+    .quote{font-family:Georgia,'Times New Roman',serif;font-size:1.55rem;line-height:1.25;color:#f0d9ae;margin:0 0 22px}
+
+    .sound{background:#d9ccb4;background-image:repeating-linear-gradient(0deg,rgba(16,36,45,.025) 0 1px,transparent 1px 5px)}
+    .songs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}
+    .song{background:#f7f0e1;border:1px solid rgba(16,36,45,.13);padding:22px;min-height:130px}
+    .song strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.22rem;margin-bottom:6px}.song span{color:#526269;font-size:.9rem}
+
+    .book{background:var(--rust);color:#fff}.book h2{color:#fff}.book .eyebrow{color:#f5d293}.book .lead{color:#ffeadf}
+    .book-grid{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end}
+    .book .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+
+    footer{padding:32px 0;background:#0c2028;color:#cabfae;font-size:.86rem}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#f0d9ae;text-decoration:none}
+
+    @media(max-width:800px){
+      .navlinks a:not(.nav-cta){display:none}
+      .hero{min-height:700px}
+      .about-grid,.video-grid,.book-grid{grid-template-columns:1fr}
+      .songs{grid-template-columns:1fr 1fr}
+      .poster-card{min-height:400px}
+    }
+    @media(max-width:520px){
+      .wrap{width:min(100% - 26px,1120px)}
+      .songs{grid-template-columns:1fr}
+      section{padding:68px 0}
+      .poster-card{padding:30px}.poster-card:after{left:30px;right:30px}.poster-title{font-size:2.8rem}
+      h1{font-size:20vw}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top">Heartland Mile</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#live">Live</a>
+        <a href="#sound">Sound</a>
+        <a class="nav-cta" href="#booking">Booking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="kicker">Chicagoland Roots Rock + Americana</div>
+        <h1>Heartland<br>Mile</h1>
+        <p class="tagline">Songs for the Long Road Home.</p>
+        <p class="hero-copy">Original songs with a Midwestern pulse, road-worn rock &amp; roll, and the kind of familiar favorites that turn a brewery, bar, backyard or festival into a singalong.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#live">Watch the band</a>
+          <a class="btn btn-ghost" href="#booking">Book Heartland Mile</a>
+        </div>
+      </div>
+      <div class="road" aria-hidden="true"></div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow">About the band</p>
+          <h2>Built for the room, not the algorithm.</h2>
+          <p class="lead">Heartland Mile is a Chicagoland band led by award-winning singer-songwriter Sean Heffernan, mixing original Americana and roots rock with classic songs people already know by heart.</p>
+          <p>Think warm harmonies, guitars with a little dirt on them, and a set that can move from Van Morrison and Creedence to Jackson Browne, Bob Seger and a Sean Heffernan original without feeling like a jukebox. The goal is simple: make the room feel good.</p>
+          <p>Sean won the 2022 Hey Nonny Songwriting Contest and was a 2026 finalist in The Acorn Singer-Songwriter Competition. Heartland Mile brings that songwriter core into a full-band setting made for Chicagoland breweries, bars, festivals, private events and opening slots.</p>
+        </div>
+        <aside class="poster-card" aria-label="Heartland Mile style card">
+          <div class="eyebrow" style="color:#e0b76f">A night with</div>
+          <div class="poster-title">Heartland<br>Mile</div>
+          <div style="color:#d8d0c2">Roots rock • Americana • folk rock • classic American songbook</div>
+          <ul class="poster-list">
+            <li>Original songs &amp; stories</li>
+            <li>Full-band crowd favorites</li>
+            <li>Flexible trio / full-band formats</li>
+            <li>Chicago-area based</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="video-sec" id="live">
+      <div class="wrap">
+        <p class="eyebrow">Live</p>
+        <h2>Hear what the room hears.</h2>
+        <p class="lead">No studio gloss needed. Here’s Heartland Mile live.</p>
+        <div class="video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/aVbrXM4s9ZY" title="Heartland Mile live performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video-note">
+            <div>
+              <p class="quote">“Songs that feel like they’ve been riding around in the glovebox for years.”</p>
+              <p>Heartland Mile can scale to the room — from a tighter trio setup to a full four-piece band.</p>
+            </div>
+            <a class="btn btn-ghost" href="https://youtube.com/shorts/Hn-yel3MYoQ?si=2FuNjpJy9LIJV-Tm" target="_blank" rel="noopener">Watch Sean’s song sampler ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sound" id="sound">
+      <div class="wrap">
+        <p class="eyebrow">The sound</p>
+        <h2>Familiar roads. A few new turns.</h2>
+        <p class="lead">A Heartland Mile set moves between originals and recognizable songs without losing the band’s rootsy, Midwestern identity.</p>
+        <div class="songs">
+          <div class="song"><strong>Bad Moon Rising</strong><span>Creedence Clearwater Revival</span></div>
+          <div class="song"><strong>Into the Mystic</strong><span>Van Morrison</span></div>
+          <div class="song"><strong>Running on Empty</strong><span>Jackson Browne</span></div>
+          <div class="song"><strong>Night Moves</strong><span>Bob Seger</span></div>
+          <div class="song"><strong>Long Train Runnin’</strong><span>The Doobie Brothers</span></div>
+          <div class="song"><strong>Pioneer Park</strong><span>Sean Heffernan original</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="booking">
+      <div class="wrap book-grid">
+        <div>
+          <p class="eyebrow">Booking</p>
+          <h2>Put a few miles on with us.</h2>
+          <p class="lead">Booking Chicagoland and Midwest dates for breweries, bars, festivals, private events, songwriter bills and opening slots.</p>
+        </div>
+        <div class="actions" style="justify-content:flex-start">
+          <a class="btn" style="background:#fff;color:#8d3c20" href="https://www.instagram.com/seanhefmusic/" target="_blank" rel="noopener">Message on Instagram</a>
+          <a class="btn btn-ghost" href="https://seanhef.com/" target="_blank" rel="noopener">SeanHeF.com ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div>
+      <div><a href="https://www.instagram.com/seanhefmusic/" target="_blank" rel="noopener">Instagram</a> &nbsp;•&nbsp; <a href="https://youtu.be/aVbrXM4s9ZY?si=iFZkHpT0FyW4Ofn7" target="_blank" rel="noopener">Live video</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
