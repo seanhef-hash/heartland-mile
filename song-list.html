@@ -3,129 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heartland Mile | Song List</title>
-  <meta name="description" content="Heartland Mile song list — roots rock, Americana, and road-tested crowd favorites." />
+  <title>Song List | Chicago Americana Cover Band | Heartland Mile</title>
+  <meta name="description" content="Browse Heartland Mile's song list: Americana, roots rock, heartland rock and crowd favorites from a Chicagoland cover band for bars, breweries and events." />
+  <meta property="og:title" content="Heartland Mile Song List | Chicagoland Americana &amp; Roots Rock" />
+  <meta property="og:description" content="Americana, roots rock, heartland rock and crowd favorites from Heartland Mile, a Chicagoland cover band." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#10282b" />
   <style>
-    :root{
-      --ink:#10242d;
-      --ink-2:#173541;
-      --cream:#f3ead6;
-      --paper:#efe4cf;
-      --gold:#c28b3a;
-      --rust:#ab542f;
-      --white:#fffdf8;
-      --line:rgba(16,36,45,.14);
-      --soft-shadow:0 10px 25px rgba(0,0,0,.12);
-      --shadow:0 18px 55px rgba(0,0,0,.16);
-    }
-    *{box-sizing:border-box}
-    body{margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.6; color:var(--ink); background:repeating-linear-gradient(0deg, rgba(16,36,45,.02) 0 1px, transparent 1px 5px), var(--cream)}
-    a{color:inherit}
-    .wrap{width:min(1120px, calc(100% - 36px)); margin:auto}
-    .topbar{background:#0c2028; color:var(--cream); border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:20px}
-    .brand{display:flex; align-items:center; gap:14px; text-decoration:none}
-    .badge{width:52px; height:52px; border-radius:14px; border:2px solid rgba(243,234,214,.7); display:grid; place-items:center; font-weight:900; letter-spacing:.08em; background:linear-gradient(135deg, rgba(194,139,58,.28), rgba(194,139,58,0) 56%)}
-    .brand strong{display:block; font-size:1.06rem; text-transform:uppercase; letter-spacing:.08em}
-    .brand span{display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.13em; color:#d6c3a0; margin-top:4px}
-    .nav a{text-decoration:none}
-    .hero{padding:60px 0 34px; background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0))}
-    .eyebrow{text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:900; color:var(--rust); margin:0 0 10px}
-    h1{font-family:Georgia,'Times New Roman',serif; font-size:clamp(3rem,7vw,5.4rem); line-height:.92; margin:0 0 14px}
-    .lead{font-size:1.1rem; color:#3b5059; max-width:760px}
-    .note{margin-top:18px; padding:14px 16px; background:rgba(255,255,255,.55); border:1px solid var(--line); box-shadow:var(--soft-shadow); font-size:.95rem; color:#42555d}
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:26px 0 84px}
-    .card{background:rgba(255,255,255,.62); border:1px solid var(--line); box-shadow:var(--shadow); padding:28px}
-    h2{font-family:Georgia,'Times New Roman',serif; font-size:2rem; line-height:1.05; margin:0 0 10px}
-    .sub{color:#5b6a70; text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; font-weight:900; margin-bottom:18px}
-    ul.songlist{list-style:none; padding:0; margin:0; columns:2; column-gap:24px}
-    ul.songlist li{break-inside:avoid; padding:8px 0; border-bottom:1px solid rgba(16,36,45,.08)}
-    .footer{padding:28px 0 40px; background:#0c2028; color:#cabfae; font-size:.86rem}
-    .footer a{color:#f0d9ae; text-decoration:none}
-    @media(max-width:860px){
-      .grid{grid-template-columns:1fr}
-    }
-    @media(max-width:640px){
-      ul.songlist{columns:1}
-      .brand span{display:none}
-    }
+    :root{--tavern:#10282b;--cream:#eee2c8;--paper:#f4ead6;--rust:#9e4f2e;--gold:#c28b3a;--sign:#244f45;--ink:#17282a;--muted:#6c685e;--line:rgba(23,40,42,.16);--shadow:0 18px 45px rgba(0,0,0,.16);--soft:0 8px 20px rgba(0,0,0,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;background:repeating-linear-gradient(0deg,rgba(31,35,29,.026) 0 1px,transparent 1px 5px),radial-gradient(circle at 15% 0%,rgba(255,255,255,.3),transparent 24%),var(--cream)}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    .topbar{background:#09191b;color:var(--cream);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .street-sign{position:relative;display:inline-block;min-width:210px;padding:10px 22px 9px;text-align:center;color:#f5efdf;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(0,0,0,.07)),var(--sign);border:3px solid #ddd2b9;border-radius:8px;box-shadow:inset 0 0 0 2px rgba(13,35,32,.8),0 5px 16px rgba(0,0,0,.28);text-transform:uppercase;font-weight:900;letter-spacing:.105em;line-height:1;text-decoration:none;transform:rotate(-.7deg)}
+    .street-sign:before,.street-sign:after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:#bfb9a8;transform:translateY(-50%);box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}.street-sign:before{left:8px}.street-sign:after{right:8px}.street-sign small{display:block;font-size:.55rem;letter-spacing:.2em;color:#d7c69f;margin-top:5px}
+    .back{text-decoration:none;font-weight:800;color:#dfcaa7}.hero{padding:72px 0 46px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0))}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--rust);margin:0 0 10px}h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,7vw,5.8rem);line-height:.92;margin:0 0 17px}.lead{font-size:1.12rem;max-width:820px;color:#3b5050}
+    .road-note{display:inline-block;margin-top:18px;padding:10px 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.11em;font-weight:900;font-size:.75rem;color:#6a655b}
+    .artist-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:24px 0 86px}.artist-card{position:relative;background:rgba(255,255,255,.55);border:1px solid var(--line);box-shadow:var(--soft);padding:22px 22px 19px;overflow:hidden}.artist-card:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--rust))}
+    h2{font-family:Georgia,'Times New Roman',serif;font-size:1.42rem;line-height:1.08;margin:2px 0 12px;color:var(--tavern)}ul{list-style:none;margin:0;padding:0}li{padding:7px 0;border-top:1px solid rgba(23,40,42,.08);font-weight:700}li:first-child{border-top:0;padding-top:0}
+    footer{padding:30px 0;background:#09191b;color:#c9bca7;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#efd5a5;text-decoration:none}
+    @media(max-width:900px){.artist-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.artist-grid{grid-template-columns:1fr}.wrap{width:min(100% - 26px,1120px)}.street-sign{min-width:175px;font-size:.83rem}.street-sign small{display:none}}
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="index.html">
-        <div class="badge">HM</div>
-        <div>
-          <strong>Heartland Mile</strong>
-          <span>Songs for the Long Road Home</span>
-        </div>
-      </a>
-      <a href="index.html">← Back to main site</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Song list</p>
-      <h1>Road-tested songs for bars, patios, breweries, and long drives home.</h1>
-      <p class="lead">Here’s a dedicated song list page for Heartland Mile. I used a starter set of songs that fits the band’s current vibe and layout. Once you send over the exact <strong>Tighthead set list</strong> and your <strong>new songs list</strong>, these can be swapped in fast.</p>
-      <div class="note">Current page structure is ready: one section for your main set, one for newer songs in the mix. This is meant to be easy to edit in GitHub later.</div>
-    </div>
-  </section>
-
-  <main class="wrap grid">
-    <section class="card">
-      <h2>Current Set</h2>
-      <div class="sub">Starter list / replace with exact Tighthead set list</div>
-      <ul class="songlist">
-        <li>Bad Moon Rising</li>
-        <li>Brown Eyed Girl</li>
-        <li>Into the Mystic</li>
-        <li>Running on Empty</li>
-        <li>Night Moves</li>
-        <li>Long Train Runnin’</li>
-        <li>Have You Ever Seen the Rain</li>
-        <li>Take It Easy</li>
-        <li>Mary Jane’s Last Dance</li>
-        <li>Peaceful Easy Feeling</li>
-        <li>Wagon Wheel</li>
-        <li>Amie</li>
-        <li>Folsom Prison Blues</li>
-        <li>Old Time Rock and Roll</li>
-        <li>Ramblin’ Man</li>
-        <li>Friends in Low Places</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>New Songs in the Mix</h2>
-      <div class="sub">Starter list / replace with your exact new songs page</div>
-      <ul class="songlist">
-        <li>Life Is a Highway</li>
-        <li>Free Fallin’</li>
-        <li>Learning to Fly</li>
-        <li>Wild Nights</li>
-        <li>The Weight</li>
-        <li>Handle With Care</li>
-        <li>Melissa</li>
-        <li>Simple Man</li>
-        <li>Summer of ’69</li>
-        <li>Runnin’ Down a Dream</li>
-        <li>Keep Your Hands to Yourself</li>
-        <li>Hurts So Good</li>
-        <li>Wonderful Tonight</li>
-        <li>Callin’ Baton Rouge</li>
-        <li>Copperhead Road</li>
-        <li>Drift Away</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">© <span id="year"></span> Heartland Mile • <a href="index.html">Main Site</a></div>
-  </footer>
-
+  <header class="topbar"><div class="wrap nav"><a class="street-sign" href="index.html">Heartland Mile<small>Songs for the Long Road Home</small></a><a class="back" href="index.html">← Main site</a></div></header>
+  <section class="hero"><div class="wrap"><p class="eyebrow">Song List</p><h1>Americana, roots rock, heartland rock and crowd favorites.</h1><p class="lead">Heartland Mile’s repertoire stretches from the Allman Brothers and Bob Seger to Van Morrison, Tom Petty, Paul Simon and more — familiar songs with a road-worn, live-band feel.</p><div class="road-note">Heartland Mile full song list • organized by artist</div></div></section>
+  <main class="wrap"><div class="artist-grid">
+    <section class="artist-card"><h2>The Allman Brothers Band</h2><ul><li>Blue Sky</li><li>Midnight Rider</li></ul></section>
+    <section class="artist-card"><h2>The Band</h2><ul><li>The Weight</li></ul></section>
+    <section class="artist-card"><h2>Ben Harper</h2><ul><li>Steal My Kisses</li></ul></section>
+    <section class="artist-card"><h2>Bill Withers</h2><ul><li>Use Me</li></ul></section>
+    <section class="artist-card"><h2>Blues Traveler</h2><ul><li>Run-Around</li></ul></section>
+    <section class="artist-card"><h2>Bob Dylan</h2><ul><li>Knockin' on Heaven's Door</li></ul></section>
+    <section class="artist-card"><h2>Bob Seger</h2><ul><li>Night Moves</li><li>Ramblin' Gamblin' Man</li></ul></section>
+    <section class="artist-card"><h2>Chris Stapleton</h2><ul><li>Tennessee Whiskey</li></ul></section>
+    <section class="artist-card"><h2>Creedence Clearwater Revival</h2><ul><li>Bad Moon Rising</li><li>Fortunate Son</li></ul></section>
+    <section class="artist-card"><h2>Dobie Gray</h2><ul><li>Drift Away</li></ul></section>
+    <section class="artist-card"><h2>The Doobie Brothers</h2><ul><li>Long Train Runnin'</li></ul></section>
+    <section class="artist-card"><h2>Eric Clapton</h2><ul><li>Layla (Acoustic)</li></ul></section>
+    <section class="artist-card"><h2>Jackson Browne</h2><ul><li>Doctor My Eyes</li><li>Running on Empty</li></ul></section>
+    <section class="artist-card"><h2>John Denver</h2><ul><li>Country Roads</li></ul></section>
+    <section class="artist-card"><h2>Kenny Rogers</h2><ul><li>The Gambler</li></ul></section>
+    <section class="artist-card"><h2>Old Crow Medicine Show</h2><ul><li>Wagon Wheel</li></ul></section>
+    <section class="artist-card"><h2>Paul Simon</h2><ul><li>Me &amp; Julio Down by the Schoolyard</li></ul></section>
+    <section class="artist-card"><h2>Pure Prairie League</h2><ul><li>Aimee</li></ul></section>
+    <section class="artist-card"><h2>Rascal Flatts</h2><ul><li>Life Is a Highway</li></ul></section>
+    <section class="artist-card"><h2>Ritchie Valens</h2><ul><li>La Bamba</li></ul></section>
+    <section class="artist-card"><h2>Santana featuring Rob Thomas</h2><ul><li>Smooth</li></ul></section>
+    <section class="artist-card"><h2>Sister Hazel</h2><ul><li>All for You</li></ul></section>
+    <section class="artist-card"><h2>Spin Doctors</h2><ul><li>Two Princes</li></ul></section>
+    <section class="artist-card"><h2>Stephen Stills</h2><ul><li>Love the One You're With</li></ul></section>
+    <section class="artist-card"><h2>Steve Earle</h2><ul><li>Galway Girl</li></ul></section>
+    <section class="artist-card"><h2>Talking Heads</h2><ul><li>Burning Down the House</li></ul></section>
+    <section class="artist-card"><h2>The Temptations</h2><ul><li>My Girl</li></ul></section>
+    <section class="artist-card"><h2>Tom Petty</h2><ul><li>Won't Back Down</li></ul></section>
+    <section class="artist-card"><h2>Van Morrison</h2><ul><li>Brown Eyed Girl</li><li>Into the Mystic</li></ul></section>
+    <section class="artist-card"><h2>The Wallflowers</h2><ul><li>One Headlight</li></ul></section>
+  </div></main>
+  <footer><div class="wrap foot"><div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div><div><a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking: seanhef@gmail.com</a></div></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
