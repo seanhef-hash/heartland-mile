@@ -27,7 +27,7 @@
       --soft:0 10px 25px rgba(0,0,0,.12);
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
     body{
       margin:0;
       color:var(--ink);
@@ -168,7 +168,35 @@
 
     @media(max-width:900px){.about-grid,.video-grid,.songs-head,.book-grid{grid-template-columns:1fr}.song-samples{grid-template-columns:1fr 1fr}}
     @media(max-width:760px){.navlinks a:not(.nav-cta){display:none}.lineup{grid-template-columns:1fr}.hero{min-height:720px}.tavern-card{min-height:475px}.tavern-card .street-sign{min-width:240px}.video-caption{font-size:.67rem}}
-    @media(max-width:520px){.wrap{width:min(100% - 26px,1140px)}section{padding:68px 0}.nav .street-sign{min-width:155px;font-size:.78rem}.nav .street-sign small{display:none}.hero-logo .street-sign{min-width:245px;font-size:1rem}h1{font-size:20vw}.song-samples{grid-template-columns:1fr}.tavern-card{padding:32px 27px}.card-footer{left:27px;right:27px}.tavern-card .street-sign{min-width:205px;font-size:.88rem}}
+    @media(max-width:640px){
+      .wrap{width:min(100% - 22px,1140px)}
+      section{padding:68px 0}
+      .nav{height:68px}
+      .nav .street-sign{min-width:138px;padding:8px 14px 7px;font-size:.72rem;letter-spacing:.09em}
+      .nav .street-sign small{display:none}
+      .nav-cta{padding:8px 12px;font-size:.84rem}
+      .hero{min-height:auto;padding:108px 0 64px}
+      .hero-logo{margin-bottom:18px}
+      .hero-logo .street-sign{min-width:min(86vw,230px);padding:12px 18px 11px;font-size:.9rem;letter-spacing:.09em}
+      .kicker{font-size:.66rem;letter-spacing:.18em;line-height:1.45;margin-bottom:14px}
+      h1{font-size:clamp(3.45rem,17vw,5.4rem);line-height:.86;letter-spacing:-.045em}
+      .tagline{font-size:1.14rem;margin:18px 0 10px}
+      .hero-copy{max-width:32ch;font-size:1rem;margin-bottom:20px}
+      .hero-strip{display:block;max-width:100%;padding:12px 14px;font-size:.7rem;line-height:1.8;letter-spacing:.1em;margin-bottom:22px}
+      .actions{gap:10px}
+      .btn{padding:13px 16px;font-size:.76rem}
+      .road-lines{left:16%;right:16%;bottom:24px;height:5px}
+      .song-samples{grid-template-columns:1fr}
+      .tavern-card{padding:32px 27px}
+      .card-footer{left:27px;right:27px}
+      .tavern-card .street-sign{min-width:205px;font-size:.88rem}
+    }
+    @media(max-width:420px){
+      .hero-logo .street-sign{min-width:min(84vw,210px);font-size:.82rem;padding:11px 16px 10px}
+      h1{font-size:clamp(3rem,16vw,4.5rem)}
+      .hero-copy{max-width:28ch}
+      .hero-strip{font-size:.66rem;padding:11px 12px}
+    }
   </style>
 </head>
 <body>
