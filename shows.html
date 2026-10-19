@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heartland Mile Shows | Live Music in Chicagoland</title>
+  <meta name="description" content="See upcoming Heartland Mile shows in Chicago and the suburbs. Dates, venues and times for the Chicagoland roots rock and Americana band." />
+  <meta property="og:title" content="Heartland Mile Shows | Chicagoland Live Music" />
+  <meta property="og:description" content="Upcoming Heartland Mile live shows across Chicago and the suburbs." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#10282b" />
+  <style>
+    :root{--tavern:#10282b;--cream:#eee2c8;--paper:#f4ead6;--rust:#9e4f2e;--gold:#c28b3a;--sign:#244f45;--ink:#17282a;--muted:#6c685e;--line:rgba(23,40,42,.16);--shadow:0 18px 45px rgba(0,0,0,.16);--soft:0 8px 20px rgba(0,0,0,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;background:repeating-linear-gradient(0deg,rgba(31,35,29,.026) 0 1px,transparent 1px 5px),radial-gradient(circle at 15% 0%,rgba(255,255,255,.3),transparent 24%),var(--cream)}
+    a{color:inherit}.wrap{width:min(1060px,calc(100% - 36px));margin:auto}
+    .topbar{background:#09191b;color:var(--cream);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .street-sign{position:relative;display:inline-block;min-width:210px;padding:10px 22px 9px;text-align:center;color:#f5efdf;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(0,0,0,.07)),var(--sign);border:3px solid #ddd2b9;border-radius:8px;box-shadow:inset 0 0 0 2px rgba(13,35,32,.8),0 5px 16px rgba(0,0,0,.28);text-transform:uppercase;font-weight:900;letter-spacing:.105em;line-height:1;text-decoration:none;transform:rotate(-.7deg)}
+    .street-sign:before,.street-sign:after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:#bfb9a8;transform:translateY(-50%);box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}.street-sign:before{left:8px}.street-sign:after{right:8px}.street-sign small{display:block;font-size:.55rem;letter-spacing:.2em;color:#d7c69f;margin-top:5px}
+    .navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;font-weight:800;color:#dfcaa7}
+    .hero{padding:72px 0 46px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0))}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--rust);margin:0 0 10px}
+    h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,7vw,5.8rem);line-height:.92;margin:0 0 17px}.lead{font-size:1.12rem;max-width:760px;color:#3b5050}
+    .shows-wrap{padding:20px 0 84px}.section-title{font-family:Georgia,'Times New Roman',serif;font-size:2rem;margin:0 0 18px;color:var(--tavern)}
+    .show-list{display:grid;gap:15px}.show-row{display:grid;grid-template-columns:118px 1fr auto;gap:24px;align-items:center;padding:21px 24px;background:rgba(255,255,255,.58);border:1px solid var(--line);box-shadow:var(--soft);position:relative;overflow:hidden}.show-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--gold),var(--rust))}
+    .show-date{text-align:center;border-right:1px solid rgba(23,40,42,.12);padding-right:20px}.show-date .month{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;font-weight:900;color:var(--rust)}.show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.35rem;line-height:.95;color:var(--tavern)}.show-date .year{display:block;font-size:.72rem;color:#756f63;margin-top:4px}
+    .show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.45rem;color:var(--tavern);line-height:1.1;margin-bottom:5px}.show-info span{display:block;color:#625f57;font-size:.94rem}.show-time{text-transform:uppercase;letter-spacing:.13em;font-size:.79rem;font-weight:900;color:var(--rust);white-space:nowrap}
+    .archive-toggle{margin-top:34px;display:inline-block;border:1px solid var(--tavern);background:transparent;color:var(--tavern);padding:12px 16px;border-radius:3px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.78rem;cursor:pointer}.archive-toggle:hover{background:rgba(16,40,43,.06)}
+    .past-wrap{display:none;margin-top:28px;padding-top:30px;border-top:1px solid var(--line)}.past-wrap.open{display:block}.past-wrap .show-row{opacity:.76}.past-wrap .show-row:before{background:#8c897f}.empty{padding:20px;background:rgba(255,255,255,.48);border:1px solid var(--line);color:#5f625d}
+    .booking-band{margin-top:52px;padding:28px;background:var(--tavern);color:var(--cream);display:flex;justify-content:space-between;gap:24px;align-items:center;box-shadow:var(--shadow)}.booking-band strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.65rem;color:#efd5a5}.booking-band span{display:block;color:#d7cdbd;margin-top:5px}.btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.78rem;padding:13px 17px;border-radius:3px;background:var(--rust);color:#fff;white-space:nowrap}
+    footer{padding:30px 0;background:#09191b;color:#c9bca7;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#efd5a5;text-decoration:none}
+    @media(max-width:650px){.wrap{width:min(100% - 26px,1060px)}.street-sign{min-width:160px;font-size:.78rem}.street-sign small{display:none}.navlinks a:not(:last-child){display:none}.hero{padding:56px 0 34px}.show-row{grid-template-columns:78px 1fr;gap:14px;padding:17px 15px 17px 18px}.show-date{padding-right:12px}.show-date .day{font-size:1.85rem}.show-time{grid-column:2;margin-top:-4px;font-size:.7rem}.show-info strong{font-size:1.16rem}.booking-band{display:block}.booking-band .btn{margin-top:18px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap nav"><a class="street-sign" href="index.html">Heartland Mile<small>Chicago • Illinois</small></a><nav class="navlinks"><a href="song-list.html">Song List</a><a href="index.html#booking">Booking</a><a href="index.html">← Main site</a></nav></div></header>
+  <section class="hero"><div class="wrap"><p class="eyebrow">Live Shows</p><h1>See Heartland Mile live.</h1><p class="lead">Upcoming Chicagoland dates from Heartland Mile. Past dates move into the archive automatically after each show.</p></div></section>
+  <main class="wrap shows-wrap">
+    <section><h2 class="section-title">Upcoming Shows</h2><div class="show-list" id="upcomingShows"></div><div class="empty" id="noUpcoming" hidden>No upcoming dates are currently announced. Check back soon.</div></section>
+    <button class="archive-toggle" id="archiveToggle" type="button" hidden>View Previous Shows</button>
+    <section class="past-wrap" id="pastWrap"><h2 class="section-title">Previous Shows</h2><div class="show-list" id="pastShows"></div></section>
+    <div class="booking-band"><div><strong>Interested in booking Heartland Mile?</strong><span>Bars, breweries, patios, festivals, private events and opening slots.</span></div><a class="btn" href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking inquiry</a></div>
+  </main>
+  <footer><div class="wrap foot"><div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div><div><a href="song-list.html">Song List</a> &nbsp;•&nbsp; <a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking: seanhef@gmail.com</a></div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const shows = [
+      {venue:'Life Bar Arcade', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T03:00:00-05:00'},
+      {venue:'Broken Hearts', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T02:00:00-06:00'},
+      {venue:'Double Clutch Brewery', dateLabel:'Friday, April 16', month:'Apr', day:'16', year:'2027', time:'8:00 PM', end:'2027-04-17T02:00:00-05:00'}
+    ];
+    const now = new Date();
+    const upcoming = document.getElementById('upcomingShows');
+    const past = document.getElementById('pastShows');
+    const toggle = document.getElementById('archiveToggle');
+    const pastWrap = document.getElementById('pastWrap');
+    const noUpcoming = document.getElementById('noUpcoming');
+    function row(show){
+      const article = document.createElement('article');
+      article.className = 'show-row';
+      article.innerHTML = `<div class="show-date"><span class="month">${show.month}</span><span class="day">${show.day}</span><span class="year">${show.year}</span></div><div class="show-info"><strong>${show.venue}</strong><span>${show.dateLabel}</span></div><div class="show-time">${show.time}</div>`;
+      return article;
+    }
+    shows.forEach(show => (now > new Date(show.end) ? past : upcoming).appendChild(row(show)));
+    if (!upcoming.children.length) noUpcoming.hidden = false;
+    if (past.children.length){
+      toggle.hidden = false;
+      toggle.addEventListener('click', () => {
+        const open = pastWrap.classList.toggle('open');
+        toggle.textContent = open ? 'Hide Previous Shows' : 'View Previous Shows';
+      });
+    }
+  </script>
+</body>
+</html>

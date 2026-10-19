@@ -111,6 +111,21 @@
     h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,5vw,4.05rem);line-height:1;margin:0 0 20px;color:var(--ink)}
     .lead{font-size:1.15rem;max-width:790px;color:#35484a}
 
+    .shows-sec{background:#f1e5cc;border-top:1px solid rgba(23,40,42,.08);border-bottom:1px solid rgba(23,40,42,.08)}
+    .shows-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}
+    .shows-head .lead{margin-bottom:0}
+    .show-list{display:grid;gap:14px}
+    .show-row{display:grid;grid-template-columns:112px 1fr auto;gap:24px;align-items:center;padding:19px 22px;background:rgba(255,255,255,.58);border:1px solid var(--line);box-shadow:var(--soft);position:relative;overflow:hidden}
+    .show-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--gold),var(--rust))}
+    .show-date{text-align:center;border-right:1px solid rgba(23,40,42,.12);padding-right:20px}
+    .show-date .month{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;font-weight:900;color:var(--rust)}
+    .show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.25rem;line-height:.95;color:var(--tavern)}
+    .show-date .year{display:block;font-size:.72rem;color:#756f63;margin-top:4px}
+    .show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;color:var(--tavern);line-height:1.1;margin-bottom:5px}
+    .show-info span{display:block;color:#625f57;font-size:.92rem}
+    .show-time{text-transform:uppercase;letter-spacing:.13em;font-size:.77rem;font-weight:900;color:var(--rust);white-space:nowrap}
+    .shows-actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
     .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:start}
     .about-copy p:not(.eyebrow){max-width:720px}
     .venue-line{margin-top:24px;padding:17px 18px;background:rgba(255,255,255,.45);border-left:5px solid var(--rust);box-shadow:var(--soft)}
@@ -179,11 +194,18 @@
       .hero-logo{margin-bottom:18px}
       .hero-logo .street-sign{min-width:min(86vw,230px);padding:12px 18px 11px;font-size:.9rem;letter-spacing:.09em}
       .kicker{font-size:.66rem;letter-spacing:.18em;line-height:1.45;margin-bottom:14px}
-      h1{font-size:clamp(3.45rem,17vw,5.4rem);line-height:.86;letter-spacing:-.045em}
+      h1{font-size:clamp(3.2rem,15vw,4.8rem);line-height:.86;letter-spacing:-.05em;max-width:100%;margin-left:auto;margin-right:auto}
       .tagline{font-size:1.14rem;margin:18px 0 10px}
       .hero-copy{max-width:32ch;font-size:1rem;margin-bottom:20px}
       .hero-strip{display:block;max-width:100%;padding:12px 14px;font-size:.7rem;line-height:1.8;letter-spacing:.1em;margin-bottom:22px}
       .actions{gap:10px}
+      .shows-head{display:block}
+      .shows-head .btn{margin-top:18px}
+      .show-row{grid-template-columns:78px 1fr;gap:14px;padding:17px 15px 17px 18px}
+      .show-date{padding-right:12px}
+      .show-date .day{font-size:1.85rem}
+      .show-time{grid-column:2;margin-top:-4px;font-size:.7rem}
+      .show-info strong{font-size:1.16rem}
       .btn{padding:13px 16px;font-size:.76rem}
       .road-lines{left:16%;right:16%;bottom:24px;height:5px}
       .song-samples{grid-template-columns:1fr}
@@ -193,7 +215,7 @@
     }
     @media(max-width:420px){
       .hero-logo .street-sign{min-width:min(84vw,210px);font-size:.82rem;padding:11px 16px 10px}
-      h1{font-size:clamp(3rem,16vw,4.5rem)}
+      h1{font-size:clamp(2.95rem,14.5vw,4.15rem);line-height:.88}
       .hero-copy{max-width:28ch}
       .hero-strip{font-size:.66rem;padding:11px 12px}
     }
@@ -206,6 +228,7 @@
         <span class="street-sign">Heartland Mile<small>Chicago • Illinois</small></span>
       </a>
       <nav class="navlinks" aria-label="Primary navigation">
+        <a href="shows.html">Shows</a>
         <a href="#about">About</a>
         <a href="#live">Live</a>
         <a href="song-list.html">Song List</a>
@@ -231,6 +254,37 @@
         </div>
       </div>
       <div class="road-lines" aria-hidden="true"></div>
+    </section>
+
+    <section class="shows-sec" id="shows">
+      <div class="wrap">
+        <div class="shows-head">
+          <div>
+            <p class="eyebrow">Upcoming Shows</p>
+            <h2>Come see us live.</h2>
+            <p class="lead">Three dates on the calendar across Chicagoland, with more to come.</p>
+          </div>
+          <a class="btn btn-primary" href="shows.html">All shows</a>
+        </div>
+        <div class="show-list" id="homeUpcomingShows">
+          <article class="show-row" data-end="2026-10-25T03:00:00-05:00">
+            <div class="show-date"><span class="month">Oct</span><span class="day">24</span><span class="year">2026</span></div>
+            <div class="show-info"><strong>Life Bar Arcade</strong><span>Saturday, October 24</span></div>
+            <div class="show-time">9:00 PM</div>
+          </article>
+          <article class="show-row" data-end="2026-12-28T02:00:00-06:00">
+            <div class="show-date"><span class="month">Dec</span><span class="day">27</span><span class="year">2026</span></div>
+            <div class="show-info"><strong>Broken Hearts</strong><span>Sunday, December 27</span></div>
+            <div class="show-time">8:00 PM</div>
+          </article>
+          <article class="show-row" data-end="2027-04-17T02:00:00-05:00">
+            <div class="show-date"><span class="month">Apr</span><span class="day">16</span><span class="year">2027</span></div>
+            <div class="show-info"><strong>Double Clutch Brewery</strong><span>Friday, April 16</span></div>
+            <div class="show-time">8:00 PM</div>
+          </article>
+        </div>
+        <div class="shows-actions"><a class="btn btn-primary" href="shows.html">View shows</a></div>
+      </div>
     </section>
 
     <section id="about">
@@ -328,9 +382,24 @@
   <footer>
     <div class="wrap foot">
       <div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div>
-      <div><a href="song-list.html">Song List</a> &nbsp;•&nbsp; Booking: <a href="mailto:seanhef@gmail.com">seanhef@gmail.com</a></div>
+      <div><a href="shows.html">Shows</a> &nbsp;•&nbsp; <a href="song-list.html">Song List</a> &nbsp;•&nbsp; Booking: <a href="mailto:seanhef@gmail.com">seanhef@gmail.com</a></div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const now = new Date();
+      const rows = document.querySelectorAll('#homeUpcomingShows .show-row');
+      let visible = 0;
+      rows.forEach(row => {
+        const end = new Date(row.dataset.end);
+        if (now > end) row.remove(); else visible++;
+      });
+      const intro = document.querySelector('.shows-head .lead');
+      if (visible === 1 && intro) intro.textContent = 'One date currently on the calendar, with more to come.';
+      if (visible === 2 && intro) intro.textContent = 'Two dates currently on the calendar, with more to come.';
+      if (visible === 0 && intro) intro.textContent = 'More dates are on the way. Check the full shows page for past shows and new announcements.';
+    })();
+  </script>
 </body>
 </html>
