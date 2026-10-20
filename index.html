@@ -8,225 +8,236 @@
   <meta property="og:title" content="Heartland Mile | Chicagoland Americana &amp; Roots Rock Cover Band" />
   <meta property="og:description" content="Heartland Mile is a Chicagoland Americana and roots rock cover band for bars, breweries, festivals and private events." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#112a2c" />
+  <meta name="theme-color" content="#0d1022" />
   <style>
     :root{
-      --tavern:#10282b;
-      --tavern2:#17383a;
-      --cream:#eee2c8;
-      --paper:#e4d4b4;
-      --paper2:#f4ead6;
-      --rust:#9e4f2e;
-      --gold:#c28b3a;
-      --sign:#244f45;
-      --sign2:#1a4039;
-      --ink:#17282a;
-      --muted:#6c685e;
-      --line:rgba(23,40,42,.16);
-      --shadow:0 20px 55px rgba(0,0,0,.24);
-      --soft:0 10px 25px rgba(0,0,0,.12);
+      --bg:#0c1020;
+      --bg2:#121933;
+      --panel:#12172b;
+      --panel-soft:rgba(18,23,43,.74);
+      --line:rgba(255,255,255,.1);
+      --cream:#f6e5c8;
+      --cream-dim:#dfcfb2;
+      --orange:#ff9740;
+      --gold:#ffbe62;
+      --pink:#ff4da0;
+      --cyan:#26eaff;
+      --red:#ff6646;
+      --text:#f4ecdf;
+      --muted:#cabda9;
+      --shadow:0 24px 60px rgba(0,0,0,.4);
+      --glow-pink:0 0 18px rgba(255,77,160,.45),0 0 40px rgba(255,77,160,.22);
+      --glow-cyan:0 0 18px rgba(38,234,255,.4),0 0 36px rgba(38,234,255,.18);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
     body{
       margin:0;
-      color:var(--ink);
       font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
       line-height:1.58;
       background:
-        repeating-linear-gradient(0deg,rgba(31,35,29,.026) 0 1px,transparent 1px 5px),
-        radial-gradient(circle at 15% 0%,rgba(255,255,255,.32),transparent 25%),
-        var(--cream);
+        radial-gradient(circle at 50% -10%, rgba(255,129,52,.18), transparent 26%),
+        radial-gradient(circle at 20% 10%, rgba(255,77,160,.12), transparent 25%),
+        linear-gradient(180deg,#0b0f1c 0%,#0d1022 52%,#0a0d18 100%);
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 92px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 92px),
+        radial-gradient(circle at center, transparent 0 55%, rgba(255,228,189,.07) 100%);
+      mix-blend-mode:screen;
     }
     a{color:inherit}
-    .wrap{width:min(1140px,calc(100% - 36px));margin:auto}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1140px, calc(100% - 34px));margin:auto}
 
-    /* STREET-SIGN LOGO */
-    .street-logo{
-      display:inline-flex;align-items:center;gap:11px;text-decoration:none;
-      transform:rotate(-.8deg);
+    .topbar{
+      position:fixed;top:0;left:0;right:0;z-index:80;
+      background:rgba(7,10,20,.8);backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    .street-sign{
-      position:relative;
-      min-width:208px;
-      padding:10px 22px 9px;
-      text-align:center;
-      color:#f5efdF;
-      background:
-        linear-gradient(180deg,rgba(255,255,255,.045),rgba(0,0,0,.07)),
-        var(--sign);
-      border:3px solid #ddd2b9;
-      border-radius:8px;
-      box-shadow:
-        inset 0 0 0 2px rgba(13,35,32,.8),
-        0 5px 16px rgba(0,0,0,.28);
-      text-transform:uppercase;
-      font-weight:900;
-      letter-spacing:.105em;
-      line-height:1;
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand-badge,.hero-badge{
+      display:inline-block;text-decoration:none;text-transform:uppercase;font-weight:900;letter-spacing:.11em;
+      color:var(--cream); background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:2px solid rgba(246,229,200,.88); border-radius:18px; position:relative;
+      box-shadow:inset 0 0 0 2px rgba(255,77,160,.38), 0 0 0 2px rgba(38,234,255,.28), var(--glow-pink), var(--glow-cyan);
     }
-    .street-sign:before,.street-sign:after{
-      content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;
-      background:#bfb9a8;box-shadow:inset 0 1px 2px rgba(0,0,0,.55);
-      transform:translateY(-50%);
+    .brand-badge{padding:12px 22px 10px;font-size:.94rem;white-space:nowrap}
+    .brand-badge:before,.brand-badge:after,.hero-badge:before,.hero-badge:after{
+      content:"";position:absolute;top:50%;width:10px;height:10px;border-radius:50%;transform:translateY(-50%);
+      background:var(--cream);box-shadow:0 0 10px rgba(255,255,255,.65);
     }
-    .street-sign:before{left:8px}.street-sign:after{right:8px}
-    .street-sign small{display:block;font-size:.55rem;letter-spacing:.2em;color:#d7c69f;margin-top:5px}
-
-    .topbar{position:fixed;z-index:70;top:0;left:0;right:0;background:rgba(11,29,31,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--cream)}
-    .nav .street-sign{min-width:184px;padding:9px 20px 8px;font-size:.9rem}
-    .navlinks{display:flex;gap:22px;align-items:center;font-size:.89rem;font-weight:800}
-    .navlinks a{text-decoration:none;opacity:.92}.navlinks a:hover{opacity:1}
-    .nav-cta{border:1px solid var(--gold);padding:9px 13px;border-radius:999px}
+    .brand-badge:before,.hero-badge:before{left:12px}.brand-badge:after,.hero-badge:after{right:12px}
+    .navlinks{display:flex;gap:22px;align-items:center;font-size:.9rem;font-weight:800}
+    .navlinks a{text-decoration:none;opacity:.92}
+    .navlinks a:hover{opacity:1;color:var(--gold)}
+    .nav-cta{padding:11px 18px;border-radius:999px;border:1.5px solid rgba(255,190,98,.8);box-shadow:0 0 18px rgba(255,190,98,.14)}
 
     .hero{
-      min-height:790px;display:grid;place-items:center;padding:125px 0 80px;position:relative;overflow:hidden;color:var(--cream);
+      position:relative;overflow:hidden;padding:138px 0 92px;min-height:850px;color:var(--text);
       background:
-        linear-gradient(180deg,rgba(8,22,24,.05),rgba(8,22,24,.76)),
-        radial-gradient(circle at 78% 15%,rgba(194,139,58,.22),transparent 23%),
-        linear-gradient(135deg,#10292c 0%,#1d4445 48%,#0d2325 100%);
+        radial-gradient(circle at 50% 27%, rgba(255,167,72,.25) 0, rgba(255,167,72,0) 18%),
+        linear-gradient(180deg, rgba(13,16,34,.34), rgba(13,16,34,.86));
     }
-    .hero:before{content:"";position:absolute;inset:0;background:
-      repeating-linear-gradient(90deg,rgba(255,255,255,.016) 0 1px,transparent 1px 88px),
-      repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 88px);opacity:.72}
-    .hero:after{content:"";position:absolute;left:-6%;right:-6%;bottom:-88px;height:195px;background:#09181a;transform:rotate(-2.2deg);box-shadow:0 -20px 45px rgba(0,0,0,.18)}
-    .road-lines{position:absolute;z-index:1;left:29%;right:29%;bottom:34px;height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 55px,transparent 55px 95px);transform:perspective(300px) rotateX(68deg);opacity:.7}
-    .hero-inner{position:relative;z-index:3;text-align:center;max-width:970px}
-    .hero-logo{margin-bottom:30px;filter:drop-shadow(0 14px 20px rgba(0,0,0,.25))}
-    .hero-logo .street-sign{font-size:1.15rem;min-width:275px;padding:15px 28px 13px;border-width:4px}
-    .kicker{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:900;color:#dfb56c;margin-bottom:18px}
-    h1{font-family:Georgia,'Times New Roman',serif;text-transform:uppercase;font-size:clamp(4.2rem,12vw,9.4rem);line-height:.82;letter-spacing:-.055em;margin:0;text-shadow:0 5px 30px rgba(0,0,0,.28)}
-    .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.18rem,2.6vw,1.72rem);margin:25px 0 12px;color:#efd5a5}
-    .hero-copy{max-width:780px;margin:0 auto 27px;font-size:1.08rem;color:#e6ddce}
-    .hero-strip{display:inline-block;border-top:1px solid rgba(238,226,200,.28);border-bottom:1px solid rgba(238,226,200,.28);padding:10px 18px;margin:2px 0 25px;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:900;color:#d7cdbd}
-    .hero-strip b{color:#e3ba76}
+    .hero:before{
+      content:"";position:absolute;left:50%;top:120px;transform:translateX(-50%);width:min(40vw,430px);height:min(40vw,430px);border-radius:50%;
+      background:radial-gradient(circle, #ffb84c 0%, #ff8f42 45%, #ff513f 73%, rgba(255,81,63,.02) 100%);
+      box-shadow:0 0 70px rgba(255,122,57,.28);
+      opacity:.95;
+    }
+    .hero:after{
+      content:"";position:absolute;left:0;right:0;bottom:-40px;height:210px;
+      background:linear-gradient(180deg, rgba(5,8,18,0) 0%, rgba(5,8,18,.4) 10%, #050812 100%);
+    }
+    .skyline{position:absolute;left:0;right:0;top:330px;height:145px;display:flex;justify-content:center;align-items:flex-end;gap:8px;pointer-events:none;opacity:.95}
+    .skyline span{display:block;background:#0a1020;box-shadow:0 0 14px rgba(38,234,255,.16);position:relative}
+    .skyline span:before{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:100%;width:3px;height:14px;background:#0a1020}
+    .skyline .b1{width:30px;height:72px}.skyline .b2{width:22px;height:96px}.skyline .b3{width:44px;height:136px}.skyline .b4{width:28px;height:90px}.skyline .b5{width:18px;height:65px}
+    .skyline .b6{width:35px;height:112px}.skyline .b7{width:24px;height:80px}.skyline .b8{width:40px;height:126px}.skyline .b9{width:21px;height:74px}.skyline .b10{width:30px;height:98px}
+    .horizon{position:absolute;left:0;right:0;top:458px;height:4px;background:linear-gradient(90deg, transparent 0, var(--pink) 18%, var(--cyan) 50%, var(--pink) 82%, transparent 100%);box-shadow:0 0 18px rgba(255,77,160,.5),0 0 24px rgba(38,234,255,.42)}
+    .road{position:absolute;left:50%;bottom:72px;transform:translateX(-50%);width:min(96vw,1120px);height:290px;clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);background:linear-gradient(180deg, rgba(10,14,28,.14), rgba(7,10,18,.95) 28%, #04070f 100%)}
+    .road-grid{position:absolute;inset:0;background:
+      linear-gradient(90deg, transparent 0, transparent 49.3%, rgba(255,255,255,.1) 49.3%, rgba(255,255,255,.1) 50.7%, transparent 50.7%, transparent 100%),
+      repeating-linear-gradient(0deg, rgba(38,234,255,.36) 0 2px, transparent 2px 36px),
+      repeating-linear-gradient(90deg, rgba(38,234,255,.24) 0 2px, transparent 2px 66px);
+      box-shadow:0 -25px 50px rgba(38,234,255,.08) inset;
+    }
+    .road:before,.road:after{content:"";position:absolute;top:0;bottom:0;width:4px;background:linear-gradient(180deg, rgba(255,77,160,.9), rgba(255,77,160,.4));box-shadow:0 0 16px rgba(255,77,160,.82)}
+    .road:before{left:0}.road:after{right:0}
+    .lane{position:absolute;left:50%;top:16px;bottom:28px;width:6px;transform:translateX(-50%);background:repeating-linear-gradient(180deg, var(--orange) 0 34px, transparent 34px 64px);box-shadow:0 0 12px rgba(255,151,64,.46)}
+
+    .hero-inner{position:relative;z-index:4;text-align:center;max-width:1040px;margin:auto}
+    .hero-badge{padding:18px 38px 16px;font-size:1.35rem;min-width:min(90vw,560px);border-radius:20px;margin-bottom:26px}
+    .hero-badge small{display:block;font-size:.68rem;letter-spacing:.3em;margin-top:9px;color:var(--cream-dim)}
+    .kicker{font-size:.86rem;letter-spacing:.34em;text-transform:uppercase;font-weight:900;color:var(--gold);margin:0 0 18px}
+    .title{
+      margin:0 auto;max-width:1100px;font-family:Georgia,'Times New Roman',serif;font-weight:900;text-transform:uppercase;
+      font-size:clamp(3.7rem,10vw,8rem);line-height:.86;letter-spacing:-.055em;color:var(--cream);
+      text-shadow:0 0 0 #fff, 0 0 10px rgba(255,190,98,.22), 0 0 24px rgba(255,77,160,.26), 0 0 36px rgba(38,234,255,.22);
+    }
+    .title .arc{display:block;transform:skewX(-6deg)}
+    .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.16rem,2.5vw,1.72rem);margin:26px 0 14px;color:var(--cream)}
+    .hero-copy{max-width:820px;margin:0 auto 26px;font-size:1.09rem;color:#efe6db}
+    .hero-strip{display:inline-block;padding:12px 18px;border-top:1px solid rgba(255,255,255,.23);border-bottom:1px solid rgba(255,255,255,.23);font-size:.78rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#e4d6c4;margin-bottom:26px;background:rgba(8,10,18,.22)}
+    .hero-strip b{color:var(--gold)}
     .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.81rem;padding:14px 18px;border-radius:3px;border:1px solid transparent}
-    .btn-primary{background:var(--rust);color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.14)}
-    .btn-ghost{border-color:rgba(238,226,200,.5);color:var(--cream);background:rgba(255,255,255,.035)}
-
-    section{padding:88px 0}
-    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--rust);margin:0 0 10px}
-    h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,5vw,4.05rem);line-height:1;margin:0 0 20px;color:var(--ink)}
-    .lead{font-size:1.15rem;max-width:790px;color:#35484a}
-
-    .shows-sec{background:#f1e5cc;border-top:1px solid rgba(23,40,42,.08);border-bottom:1px solid rgba(23,40,42,.08)}
-    .shows-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}
-    .shows-head .lead{margin-bottom:0}
-    .show-list{display:grid;gap:14px}
-    .show-row{display:grid;grid-template-columns:112px 1fr auto;gap:24px;align-items:center;padding:19px 22px;background:rgba(255,255,255,.58);border:1px solid var(--line);box-shadow:var(--soft);position:relative;overflow:hidden}
-    .show-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--gold),var(--rust))}
-    .show-date{text-align:center;border-right:1px solid rgba(23,40,42,.12);padding-right:20px}
-    .show-date .month{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;font-weight:900;color:var(--rust)}
-    .show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.25rem;line-height:.95;color:var(--tavern)}
-    .show-date .year{display:block;font-size:.72rem;color:#756f63;margin-top:4px}
-    .show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;color:var(--tavern);line-height:1.1;margin-bottom:5px}
-    .show-info span{display:block;color:#625f57;font-size:.92rem}
-    .show-time{text-transform:uppercase;letter-spacing:.13em;font-size:.77rem;font-weight:900;color:var(--rust);white-space:nowrap}
-    .shows-actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-
-    .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:start}
-    .about-copy p:not(.eyebrow){max-width:720px}
-    .venue-line{margin-top:24px;padding:17px 18px;background:rgba(255,255,255,.45);border-left:5px solid var(--rust);box-shadow:var(--soft)}
-    .venue-line strong{color:var(--tavern)}
-
-    .lineup{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
-    .member{position:relative;padding:18px;background:rgba(255,255,255,.52);border:1px solid var(--line);box-shadow:var(--soft);transform:rotate(-.25deg)}
-    .member:nth-child(even){transform:rotate(.25deg)}
-    .member:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--gold),var(--rust))}
-    .member strong{display:block;font-size:1rem}.member span{display:block;color:#6d695f;font-size:.88rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800;margin-top:3px}
-
-    .tavern-card{position:relative;overflow:hidden;background:var(--tavern);color:var(--cream);min-height:500px;padding:42px 38px;box-shadow:var(--shadow);border:10px solid #bda67c;outline:1px solid rgba(0,0,0,.33)}
-    .tavern-card:before{content:"";position:absolute;inset:0;background:
-      repeating-linear-gradient(0deg,rgba(255,255,255,.024) 0 1px,transparent 1px 6px),
-      radial-gradient(circle at 86% 12%,rgba(194,139,58,.16),transparent 28%);opacity:.95}
-    .tavern-card>*{position:relative;z-index:1}
-    .card-kicker{text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;font-weight:900;color:#dfb56c}
-    .tavern-card .street-logo{margin:26px 0 24px}.tavern-card .street-sign{min-width:280px;font-size:1.05rem}
-    .chalk{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.2;color:#f0d9ae;margin:6px 0 18px}
-    .card-list{list-style:none;padding:0;margin:24px 0 0}.card-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.11);font-weight:700}
-    .card-footer{position:absolute;left:38px;right:38px;bottom:28px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:#d9c399;font-weight:900}
-
-    .video-sec{background:
-      repeating-linear-gradient(90deg,rgba(255,255,255,.01) 0 1px,transparent 1px 54px),
-      var(--tavern);color:var(--cream)}
-    .video-sec h2{color:var(--cream)}.video-sec .eyebrow{color:#dfb56c}.video-sec .lead{color:#d8cec0}
-    .video-grid{display:grid;grid-template-columns:1.44fr .56fr;gap:30px;margin-top:34px;align-items:stretch}
-    .video-card{box-shadow:var(--shadow);background:#050b0c;border:7px solid #0b1718;outline:1px solid rgba(255,255,255,.08)}
-    .video-preview{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;text-decoration:none;background:#000}
-    .video-preview img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.94) contrast(1.03)}
-    .video-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.42))}
-    .play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:62px;border-radius:15px;background:#ff0033;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-    .play:before{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent white}
-    .video-caption{position:absolute;z-index:3;left:18px;right:18px;bottom:15px;display:flex;justify-content:space-between;gap:15px;color:#fff;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;font-weight:900}.video-caption span:last-child{color:#efd5a5}
-    .video-note{border:1px solid rgba(238,226,200,.19);padding:30px;background:rgba(255,255,255,.035);display:flex;flex-direction:column;justify-content:center}
-    .quote{font-family:Georgia,'Times New Roman',serif;font-size:1.68rem;line-height:1.2;color:#efd5a5;margin:0 0 20px}.note-copy{color:#ddd3c4}
-
-    .songs-sec{background:
-      linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0)),
-      repeating-linear-gradient(0deg,rgba(22,40,42,.025) 0 1px,transparent 1px 5px),
-      #d8c8a8}
-    .songs-head{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end}
-    .song-samples{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:32px}
-    .song-card{background:#f4ead5;border:1px solid rgba(23,40,42,.15);padding:20px;box-shadow:0 7px 18px rgba(68,52,28,.08)}
-    .song-card strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.12rem}.song-card span{font-size:.88rem;color:#6b675e}
-
-    .book{background:var(--rust);color:#fff;position:relative;overflow:hidden}
-    .book:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.02) 0 2px,transparent 2px 9px)}
-    .book .wrap{position:relative}.book h2{color:#fff}.book .eyebrow{color:#f7d49a}.book .lead{color:#ffeadf}
-    .book-grid{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end}
-    .email-btn{background:#fff;color:#884021}
-
-    footer{padding:30px 0;background:#09191b;color:#c9bca7;font-size:.85rem}
-    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#efd5a5;text-decoration:none}
-
-    @media(max-width:900px){.about-grid,.video-grid,.songs-head,.book-grid{grid-template-columns:1fr}.song-samples{grid-template-columns:1fr 1fr}}
-    @media(max-width:760px){.navlinks a:not(.nav-cta){display:none}.lineup{grid-template-columns:1fr}.hero{min-height:720px}.tavern-card{min-height:475px}.tavern-card .street-sign{min-width:240px}.video-caption{font-size:.67rem}}
-    @media(max-width:640px){
-      .wrap{width:min(100% - 22px,1140px)}
-      section{padding:68px 0}
-      .nav{height:68px}
-      .nav .street-sign{min-width:138px;padding:8px 14px 7px;font-size:.72rem;letter-spacing:.09em}
-      .nav .street-sign small{display:none}
-      .nav-cta{padding:8px 12px;font-size:.84rem}
-      .hero{min-height:auto;padding:108px 0 64px}
-      .hero-logo{margin-bottom:18px}
-      .hero-logo .street-sign{min-width:min(86vw,230px);padding:12px 18px 11px;font-size:.9rem;letter-spacing:.09em}
-      .kicker{font-size:.66rem;letter-spacing:.18em;line-height:1.45;margin-bottom:14px}
-      h1{font-size:clamp(3.2rem,15vw,4.8rem);line-height:.86;letter-spacing:-.05em;max-width:100%;margin-left:auto;margin-right:auto}
-      .tagline{font-size:1.14rem;margin:18px 0 10px}
-      .hero-copy{max-width:32ch;font-size:1rem;margin-bottom:20px}
-      .hero-strip{display:block;max-width:100%;padding:12px 14px;font-size:.7rem;line-height:1.8;letter-spacing:.1em;margin-bottom:22px}
-      .actions{gap:10px}
-      .shows-head{display:block}
-      .shows-head .btn{margin-top:18px}
-      .show-row{grid-template-columns:78px 1fr;gap:14px;padding:17px 15px 17px 18px}
-      .show-date{padding-right:12px}
-      .show-date .day{font-size:1.85rem}
-      .show-time{grid-column:2;margin-top:-4px;font-size:.7rem}
-      .show-info strong{font-size:1.16rem}
-      .btn{padding:13px 16px;font-size:.76rem}
-      .road-lines{left:16%;right:16%;bottom:24px;height:5px}
-      .song-samples{grid-template-columns:1fr}
-      .tavern-card{padding:32px 27px}
-      .card-footer{left:27px;right:27px}
-      .tavern-card .street-sign{min-width:205px;font-size:.88rem}
+    .btn{
+      display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.09em;font-weight:900;font-size:.82rem;
+      padding:15px 20px;border-radius:8px;border:1.5px solid transparent;transition:.15s ease;
     }
-    @media(max-width:420px){
-      .hero-logo .street-sign{min-width:min(84vw,210px);font-size:.82rem;padding:11px 16px 10px}
-      h1{font-size:clamp(2.95rem,14.5vw,4.15rem);line-height:.88}
-      .hero-copy{max-width:28ch}
-      .hero-strip{font-size:.66rem;padding:11px 12px}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(180deg,var(--orange),#f36a34);color:#fff;box-shadow:0 0 16px rgba(255,151,64,.32),0 10px 24px rgba(0,0,0,.3)}
+    .btn-ghost{border-color:rgba(38,234,255,.7);color:var(--cream);background:rgba(10,14,28,.35);box-shadow:0 0 14px rgba(38,234,255,.18)}
+
+    section{padding:92px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--gold);margin:0 0 12px}
+    h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,4.5vw,4rem);line-height:1;margin:0 0 18px;color:var(--cream)}
+    .lead{font-size:1.13rem;max-width:780px;color:#dacdbb}
+    .panel{background:linear-gradient(180deg, rgba(17,22,40,.92), rgba(11,14,28,.92));border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .panel:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,0) 35%), radial-gradient(circle at top right, rgba(255,77,160,.13), transparent 28%), radial-gradient(circle at bottom left, rgba(38,234,255,.12), transparent 24%)}
+    .panel > *{position:relative;z-index:1}
+
+    .shows-sec{padding-top:80px}
+    .shows-head{display:flex;justify-content:space-between;gap:26px;align-items:end;margin-bottom:24px}
+    .show-list{display:grid;gap:16px}
+    .show-row{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;padding:22px 24px;border-radius:18px}
+    .show-date{text-align:center;border-right:1px solid rgba(255,255,255,.12);padding-right:22px}
+    .show-date .month{display:block;color:var(--pink);font-weight:900;letter-spacing:.18em;font-size:.7rem;text-transform:uppercase}
+    .show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.45rem;line-height:.95;color:var(--cream)}
+    .show-date .year{display:block;font-size:.75rem;color:var(--muted);margin-top:5px}
+    .show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.42rem;line-height:1.08;margin-bottom:5px;color:var(--cream)}
+    .show-info span{display:block;color:var(--muted);font-size:.95rem}
+    .show-time{font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);white-space:nowrap}
+    .shows-actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+    #noUpcoming{color:var(--muted);padding-top:14px}
+
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+    .about-copy p{color:#ddd1c3}
+    .venue-line{margin-top:24px;padding:17px 18px;border-left:4px solid var(--orange);background:rgba(255,255,255,.04);color:#e8dbc7}
+    .lineup{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+    .member{padding:18px 18px 16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);box-shadow:0 0 12px rgba(38,234,255,.06) inset}
+    .member strong{display:block;font-size:1rem;color:var(--cream)}
+    .member span{display:block;margin-top:3px;color:#c7b8a0;font-size:.9rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+
+    .poster-card{padding:34px;border-radius:22px}
+    .poster-top{font-size:.72rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+    .poster-card .hero-badge{min-width:100%;width:100%;font-size:1.08rem;margin:0 0 22px;padding:17px 22px 15px}
+    .quote{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.17;color:var(--cream);margin:0 0 20px}
+    .card-list{list-style:none;padding:0;margin:24px 0 0}
+    .card-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#dfd2c3;font-weight:700}
+
+    .video-sec{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0))}
+    .video-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;margin-top:32px}
+    .video-card{border-radius:22px;padding:10px}
+    .video-preview{display:block;position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;text-decoration:none;background:#02040a}
+    .video-preview img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.02)}
+    .video-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.48))}
+    .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:92px;height:64px;border-radius:18px;background:#ff174e;display:grid;place-items:center;box-shadow:0 0 18px rgba(255,23,78,.52),0 12px 30px rgba(0,0,0,.35)}
+    .play:before{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent white}
+    .video-caption{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;display:flex;justify-content:space-between;gap:12px;color:#fff;font-size:.77rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .video-caption span:last-child{color:var(--gold)}
+    .video-note{padding:28px;border-radius:22px}
+    .video-note p{color:#ddd1c3}
+
+    .songs-head{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+    .song-samples{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .song-card{padding:20px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 1px rgba(38,234,255,.04) inset}
+    .song-card strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.16rem;color:var(--cream)}
+    .song-card span{font-size:.89rem;color:#ccbfae}
+
+    .book .book-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;padding:38px;border-radius:24px}
+    .email-line{margin-top:12px;font-size:.92rem;color:#d5c8b6}
+    .email-line a{color:var(--gold);font-weight:800}
+
+    footer{padding:32px 0;background:#090c16;color:#bfb29e;font-size:.86rem;border-top:1px solid rgba(255,255,255,.06)}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--gold);text-decoration:none}
+
+    @media(max-width:980px){
+      .about-grid,.video-grid,.songs-head,.book .book-grid{grid-template-columns:1fr}
+      .song-samples{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .navlinks a:not(.nav-cta){display:none}
+      .show-row{grid-template-columns:100px 1fr;gap:18px}.show-time{grid-column:2}
+      .lineup{grid-template-columns:1fr}
+      .hero{padding-top:116px;min-height:760px}
+      .skyline{top:300px;height:118px;gap:6px}
+      .horizon{top:416px}
+      .road{height:248px;bottom:62px}
+      .play{width:82px;height:58px}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(100% - 24px,1140px)}
+      .nav{min-height:68px}
+      .brand-badge{padding:10px 16px 9px;font-size:.8rem}
+      .brand-badge:before,.brand-badge:after{width:8px;height:8px}
+      .nav-cta{padding:9px 12px;font-size:.84rem}
+      .hero{padding:104px 0 58px;min-height:auto}
+      .hero:before{top:118px;width:72vw;height:72vw}
+      .skyline{top:276px;height:98px;gap:5px}
+      .horizon{top:384px}
+      .road{height:210px;bottom:52px;width:97vw}
+      .hero-badge{min-width:auto;width:min(100%,320px);padding:14px 20px 12px;font-size:.98rem;border-radius:18px;margin-bottom:20px}
+      .hero-badge small{font-size:.58rem;letter-spacing:.22em}
+      .kicker{font-size:.68rem;letter-spacing:.22em;line-height:1.5}
+      .title{font-size:clamp(2.95rem,16vw,5rem);line-height:.88}
+      .tagline{font-size:1.1rem;margin:20px 0 12px}
+      .hero-copy{font-size:1rem;max-width:30ch;margin-bottom:20px}
+      .hero-strip{display:block;font-size:.69rem;line-height:1.75;padding:12px 14px}
+      .btn{padding:13px 16px;font-size:.76rem}
+      .shows-head{display:block}.show-row{grid-template-columns:1fr;gap:12px}.show-date{padding-right:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:14px}.show-time{grid-column:auto}
+      .song-samples{grid-template-columns:1fr}
+      section{padding:74px 0}
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="street-logo" href="#top" aria-label="Heartland Mile home">
-        <span class="street-sign">Heartland Mile<small>Chicago • Illinois</small></span>
-      </a>
+      <a class="brand-badge" href="#top">Heartland Mile</a>
       <nav class="navlinks" aria-label="Primary navigation">
         <a href="shows.html">Shows</a>
         <a href="#about">About</a>
@@ -239,51 +250,41 @@
 
   <main id="top">
     <section class="hero">
+      <div class="skyline" aria-hidden="true">
+        <span class="b1"></span><span class="b2"></span><span class="b5"></span><span class="b4"></span><span class="b3"></span><span class="b6"></span><span class="b7"></span><span class="b8"></span><span class="b9"></span><span class="b4"></span><span class="b6"></span><span class="b10"></span><span class="b5"></span><span class="b2"></span>
+      </div>
+      <div class="horizon" aria-hidden="true"></div>
+      <div class="road" aria-hidden="true"><div class="road-grid"></div><div class="lane"></div></div>
       <div class="wrap hero-inner">
-        <div class="hero-logo">
-          <span class="street-logo"><span class="street-sign">Heartland Mile<small>Chicago • Illinois</small></span></span>
-        </div>
+        <div class="hero-badge">Heartland Mile<small>Chicago • Illinois</small></div>
         <div class="kicker">Chicagoland Roots Rock + Americana</div>
-        <h1>Heartland<br>Mile</h1>
+        <h1 class="title"><span class="arc">Heartland Mile</span></h1>
         <p class="tagline">Songs for the Long Road Home.</p>
         <p class="hero-copy">Heartland Mile plays the kind of lived-in tunes that just feel right with the windows down on a warm summer’s night, the open road stretching out forever.</p>
         <div class="hero-strip"><b>4-piece band</b> &nbsp;•&nbsp; seasoned Chicago musicians &nbsp;•&nbsp; bars, breweries, patios &amp; private events</div>
         <div class="actions">
           <a class="btn btn-primary" href="#live">Watch the band</a>
-          <a class="btn btn-ghost" href="song-list.html">See the song list</a>
+          <a class="btn btn-ghost" href="shows.html">See the shows</a>
         </div>
       </div>
-      <div class="road-lines" aria-hidden="true"></div>
     </section>
 
-    <section class="shows-sec" id="shows">
+    <section class="shows-sec">
       <div class="wrap">
         <div class="shows-head">
           <div>
             <p class="eyebrow">Upcoming Shows</p>
-            <h2>Come see us live.</h2>
-            <p class="lead">Three dates on the calendar across Chicagoland, with more to come.</p>
+            <h2>Catch Heartland Mile live.</h2>
+            <p class="lead">Current dates are listed here on the homepage, with a full shows page and archive for past gigs.</p>
           </div>
-          <a class="btn btn-primary" href="shows.html">All shows</a>
+          <div class="actions" style="justify-content:flex-start"><a class="btn btn-ghost" href="shows.html">Full shows page</a></div>
         </div>
-        <div class="show-list" id="homeUpcomingShows">
-          <article class="show-row" data-end="2026-10-25T03:00:00-05:00">
-            <div class="show-date"><span class="month">Oct</span><span class="day">24</span><span class="year">2026</span></div>
-            <div class="show-info"><strong>Life Bar Arcade</strong><span>Saturday, October 24</span></div>
-            <div class="show-time">9:00 PM</div>
-          </article>
-          <article class="show-row" data-end="2026-12-28T02:00:00-06:00">
-            <div class="show-date"><span class="month">Dec</span><span class="day">27</span><span class="year">2026</span></div>
-            <div class="show-info"><strong>Broken Hearts</strong><span>Sunday, December 27</span></div>
-            <div class="show-time">8:00 PM</div>
-          </article>
-          <article class="show-row" data-end="2027-04-17T02:00:00-05:00">
-            <div class="show-date"><span class="month">Apr</span><span class="day">16</span><span class="year">2027</span></div>
-            <div class="show-info"><strong>Double Clutch Brewery</strong><span>Friday, April 16</span></div>
-            <div class="show-time">8:00 PM</div>
-          </article>
+        <div class="show-list" id="upcomingShows"></div>
+        <p id="noUpcoming" hidden>No upcoming shows are listed right now. Check back soon.</p>
+        <div class="shows-actions">
+          <a class="btn btn-primary" href="shows.html">View all shows</a>
+          <a class="btn btn-ghost" id="archiveButton" href="shows.html#previousShows" hidden>View previous shows</a>
         </div>
-        <div class="shows-actions"><a class="btn btn-primary" href="shows.html">View shows</a></div>
       </div>
     </section>
 
@@ -295,7 +296,6 @@
           <p class="lead">Heartland Mile is a four-piece band of experienced Chicago musicians playing roots rock, Americana and familiar crowd favorites with a lived-in bar-band soul.</p>
           <p>The set pulls from roots rock, Americana, heartland rock and familiar crowd favorites. The band keeps it loose, musical and human: ringing guitars, a solid rhythm section, big choruses and enough grit to make the songs feel like they belong in the room.</p>
           <div class="venue-line">Collectively, members of Heartland Mile have played respected Chicagoland stages including <strong>Hey Nonny</strong>, <strong>Bub City</strong>, <strong>Joe’s Live</strong> and <strong>The Acorn Theater</strong>.</div>
-
           <div class="lineup" aria-label="Band lineup">
             <div class="member"><strong>Sean Heffernan</strong><span>Guitar / Lead Vocals</span></div>
             <div class="member"><strong>Elliott Esparza</strong><span>Lead Guitar</span></div>
@@ -303,18 +303,16 @@
             <div class="member"><strong>Scott Salzinger</strong><span>Drums</span></div>
           </div>
         </div>
-
-        <aside class="tavern-card" aria-label="Heartland Mile brand card">
-          <div class="card-kicker">Chicago • Illinois • Roots Rock + Americana</div>
-          <div class="street-logo"><span class="street-sign">Heartland Mile<small>Chicago • Illinois</small></span></div>
-          <p class="chalk">Roots rock, Americana and crowd favorites with a loose, lived-in bar-band feel.</p>
+        <aside class="panel poster-card" aria-label="Heartland Mile poster-style card">
+          <div class="poster-top">Chicago • Illinois • Roots Rock + Americana</div>
+          <div class="hero-badge">Heartland Mile<small>Live band</small></div>
+          <p class="quote">Warm guitars, a solid rhythm section, and songs that feel good in the room.</p>
           <ul class="card-list">
             <li>Roots rock &amp; Americana favorites</li>
-            <li>Warm guitars and a solid rhythm section</li>
             <li>Four experienced Chicago musicians</li>
             <li>Built for breweries, bars, patios &amp; private events</li>
+            <li>Loose, lived-in bar-band feel</li>
           </ul>
-          <div class="card-footer">Four-piece Chicagoland band</div>
         </aside>
       </div>
     </section>
@@ -325,55 +323,57 @@
         <h2>See what the band sounds like live.</h2>
         <p class="lead">No studio polish needed — four players, a room, and songs people know by heart.</p>
         <div class="video-grid">
-          <div class="video-card">
+          <div class="panel video-card">
             <a class="video-preview" href="https://www.youtube.com/watch?v=aVbrXM4s9ZY" target="_blank" rel="noopener" aria-label="Watch Heartland Mile live at Tighthead on YouTube">
               <img src="https://i.ytimg.com/vi/aVbrXM4s9ZY/maxresdefault.jpg" alt="Heartland Mile live at Tighthead" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/aVbrXM4s9ZY/sddefault.jpg';" />
               <span class="play" aria-hidden="true"></span>
               <span class="video-caption"><span>Heartland Mile live at Tighthead</span><span>Watch on YouTube</span></span>
             </a>
           </div>
-          <div class="video-note">
+          <div class="panel video-note">
             <p class="quote">“Familiar songs with a loose, live-band feel.”</p>
-            <p class="note-copy">Roots rock, Americana and barroom favorites played by four experienced Chicago musicians.</p>
+            <p>Roots rock, Americana and barroom favorites played by four experienced Chicago musicians.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="songs-sec" id="sound">
-      <div class="wrap songs-head">
-        <div>
-          <p class="eyebrow">The songbook</p>
-          <h2>Songs people know by heart.</h2>
-          <p class="lead">The set moves through Van Morrison, Creedence, Jackson Browne, Bob Seger, the Allman Brothers, Paul Simon, the Doobie Brothers and more — songs people know, played like a band rather than a playlist.</p>
+    <section>
+      <div class="wrap">
+        <div class="songs-head">
+          <div>
+            <p class="eyebrow">The songbook</p>
+            <h2>Songs people know by heart.</h2>
+            <p class="lead">The set moves through Van Morrison, Creedence, Jackson Browne, Bob Seger, the Allman Brothers, Paul Simon, the Doobie Brothers and more — songs people know, played like a band rather than a playlist.</p>
+          </div>
+          <div class="actions" style="justify-content:flex-start"><a class="btn btn-primary" href="song-list.html">Full song list</a></div>
         </div>
-        <div class="actions" style="justify-content:flex-start">
-          <a class="btn btn-primary" href="song-list.html">Full song list</a>
+        <div class="song-samples" aria-label="Sample songs">
+          <div class="song-card"><strong>Into the Mystic</strong><span>Van Morrison</span></div>
+          <div class="song-card"><strong>Bad Moon Rising</strong><span>Creedence Clearwater Revival</span></div>
+          <div class="song-card"><strong>Running on Empty</strong><span>Jackson Browne</span></div>
+          <div class="song-card"><strong>Night Moves</strong><span>Bob Seger</span></div>
+          <div class="song-card"><strong>Blue Sky</strong><span>The Allman Brothers Band</span></div>
+          <div class="song-card"><strong>Long Train Runnin’</strong><span>The Doobie Brothers</span></div>
         </div>
-      </div>
-      <div class="wrap song-samples" aria-label="Sample songs">
-        <div class="song-card"><strong>Into the Mystic</strong><span>Van Morrison</span></div>
-        <div class="song-card"><strong>Bad Moon Rising</strong><span>Creedence Clearwater Revival</span></div>
-        <div class="song-card"><strong>Running on Empty</strong><span>Jackson Browne</span></div>
-        <div class="song-card"><strong>Night Moves</strong><span>Bob Seger</span></div>
-        <div class="song-card"><strong>Blue Sky</strong><span>The Allman Brothers Band</span></div>
-        <div class="song-card"><strong>Long Train Runnin’</strong><span>The Doobie Brothers</span></div>
       </div>
     </section>
 
-    <section class="book" id="booking">
-      <div class="wrap book-grid">
-        <div>
-          <p class="eyebrow">Booking</p>
-          <h2>Bring Heartland Mile to your room.</h2>
-          <p class="lead">Booking Chicagoland and Midwest dates for breweries, bars, patios, festivals, private events and opening slots.</p>
-        </div>
-        <div>
-          <div class="actions" style="justify-content:flex-start">
-            <a class="btn email-btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=seanhef@gmail.com&amp;su=Heartland%20Mile%20Booking%20Inquiry" target="_blank" rel="noopener">Email Heartland Mile</a>
-            <a class="btn btn-ghost" href="https://youtu.be/aVbrXM4s9ZY?si=iFZkHpT0FyW4Ofn7" target="_blank" rel="noopener">Watch live video ↗</a>
+    <section id="booking" class="book">
+      <div class="wrap">
+        <div class="panel book-grid">
+          <div>
+            <p class="eyebrow">Booking</p>
+            <h2>Bring Heartland Mile to your room.</h2>
+            <p class="lead">Booking Chicagoland and Midwest dates for breweries, bars, patios, festivals, private events and opening slots.</p>
           </div>
-          <div style="margin-top:12px;font-size:.9rem;color:#ffeadf">Or email <a href="mailto:seanhef@gmail.com" style="font-weight:800">seanhef@gmail.com</a></div>
+          <div>
+            <div class="actions" style="justify-content:flex-start">
+              <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=seanhef@gmail.com&amp;su=Heartland%20Mile%20Booking%20Inquiry" target="_blank" rel="noopener">Email Heartland Mile</a>
+              <a class="btn btn-ghost" href="shows.html">Upcoming shows</a>
+            </div>
+            <div class="email-line">Or email <a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">seanhef@gmail.com</a></div>
+          </div>
         </div>
       </div>
     </section>
@@ -382,24 +382,37 @@
   <footer>
     <div class="wrap foot">
       <div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div>
-      <div><a href="shows.html">Shows</a> &nbsp;•&nbsp; <a href="song-list.html">Song List</a> &nbsp;•&nbsp; Booking: <a href="mailto:seanhef@gmail.com">seanhef@gmail.com</a></div>
+      <div><a href="shows.html">Shows</a> &nbsp;•&nbsp; <a href="song-list.html">Song List</a> &nbsp;•&nbsp; Booking: <a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">seanhef@gmail.com</a></div>
     </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      const now = new Date();
-      const rows = document.querySelectorAll('#homeUpcomingShows .show-row');
-      let visible = 0;
-      rows.forEach(row => {
-        const end = new Date(row.dataset.end);
-        if (now > end) row.remove(); else visible++;
-      });
-      const intro = document.querySelector('.shows-head .lead');
-      if (visible === 1 && intro) intro.textContent = 'One date currently on the calendar, with more to come.';
-      if (visible === 2 && intro) intro.textContent = 'Two dates currently on the calendar, with more to come.';
-      if (visible === 0 && intro) intro.textContent = 'More dates are on the way. Check the full shows page for past shows and new announcements.';
-    })();
+    const shows = [
+      {venue:'Life Bar Arcade', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T00:00:00-05:00'},
+      {venue:'Broken Hearts', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T00:00:00-06:00'},
+      {venue:'Double Clutch Brewery', dateLabel:'Friday, April 16', month:'Apr', day:'16', year:'2027', time:'8:00 PM', end:'2027-04-17T02:00:00-05:00'}
+    ];
+    const now = new Date();
+    const upcoming = document.getElementById('upcomingShows');
+    const noUpcoming = document.getElementById('noUpcoming');
+    const archiveButton = document.getElementById('archiveButton');
+    let hasPast = false;
+    function row(show){
+      const article = document.createElement('article');
+      article.className = 'panel show-row';
+      article.innerHTML = `<div class="show-date"><span class="month">${show.month}</span><span class="day">${show.day}</span><span class="year">${show.year}</span></div><div class="show-info"><strong>${show.venue}</strong><span>${show.dateLabel}</span></div><div class="show-time">${show.time}</div>`;
+      return article;
+    }
+    shows.forEach(show => {
+      if (now > new Date(show.end)) {
+        hasPast = true;
+      } else {
+        upcoming.appendChild(row(show));
+      }
+    });
+    if (!upcoming.children.length) noUpcoming.hidden = false;
+    if (hasPast) archiveButton.hidden = false;
   </script>
 </body>
 </html>
