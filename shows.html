@@ -3,51 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heartland Mile Shows | Live Music in Chicagoland</title>
-  <meta name="description" content="See upcoming Heartland Mile shows in Chicago and the suburbs. Dates, venues and times for the Chicagoland roots rock and Americana band." />
-  <meta property="og:title" content="Heartland Mile Shows | Chicagoland Live Music" />
-  <meta property="og:description" content="Upcoming Heartland Mile live shows across Chicago and the suburbs." />
+  <title>Shows | Heartland Mile | Chicago Americana &amp; Roots Rock Cover Band</title>
+  <meta name="description" content="See upcoming Heartland Mile shows in Chicagoland, plus a running archive of previous performances." />
+  <meta property="og:title" content="Heartland Mile Shows | Chicagoland Americana &amp; Roots Rock" />
+  <meta property="og:description" content="Upcoming Heartland Mile shows in Chicagoland, plus previous performances." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#10282b" />
+  <meta name="theme-color" content="#0d1022" />
   <style>
-    :root{--tavern:#10282b;--cream:#eee2c8;--paper:#f4ead6;--rust:#9e4f2e;--gold:#c28b3a;--sign:#244f45;--ink:#17282a;--muted:#6c685e;--line:rgba(23,40,42,.16);--shadow:0 18px 45px rgba(0,0,0,.16);--soft:0 8px 20px rgba(0,0,0,.09)}
+    :root{--bg:#0c1020;--panel:#12172b;--line:rgba(255,255,255,.1);--cream:#f6e5c8;--cream-dim:#dfcfb2;--orange:#ff9740;--gold:#ffbe62;--pink:#ff4da0;--cyan:#26eaff;--text:#f4ecdf;--muted:#cabda9;--shadow:0 24px 60px rgba(0,0,0,.4);--glow-pink:0 0 18px rgba(255,77,160,.45),0 0 40px rgba(255,77,160,.22);--glow-cyan:0 0 18px rgba(38,234,255,.4),0 0 36px rgba(38,234,255,.18)}
     *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-    body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;background:repeating-linear-gradient(0deg,rgba(31,35,29,.026) 0 1px,transparent 1px 5px),radial-gradient(circle at 15% 0%,rgba(255,255,255,.3),transparent 24%),var(--cream)}
-    a{color:inherit}.wrap{width:min(1060px,calc(100% - 36px));margin:auto}
-    .topbar{background:#09191b;color:var(--cream);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .street-sign{position:relative;display:inline-block;min-width:210px;padding:10px 22px 9px;text-align:center;color:#f5efdf;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(0,0,0,.07)),var(--sign);border:3px solid #ddd2b9;border-radius:8px;box-shadow:inset 0 0 0 2px rgba(13,35,32,.8),0 5px 16px rgba(0,0,0,.28);text-transform:uppercase;font-weight:900;letter-spacing:.105em;line-height:1;text-decoration:none;transform:rotate(-.7deg)}
-    .street-sign:before,.street-sign:after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:#bfb9a8;transform:translateY(-50%);box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}.street-sign:before{left:8px}.street-sign:after{right:8px}.street-sign small{display:block;font-size:.55rem;letter-spacing:.2em;color:#d7c69f;margin-top:5px}
-    .navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;font-weight:800;color:#dfcaa7}
-    .hero{padding:72px 0 46px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0))}
-    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--rust);margin:0 0 10px}
-    h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,7vw,5.8rem);line-height:.92;margin:0 0 17px}.lead{font-size:1.12rem;max-width:760px;color:#3b5050}
-    .shows-wrap{padding:20px 0 84px}.section-title{font-family:Georgia,'Times New Roman',serif;font-size:2rem;margin:0 0 18px;color:var(--tavern)}
-    .show-list{display:grid;gap:15px}.show-row{display:grid;grid-template-columns:118px 1fr auto;gap:24px;align-items:center;padding:21px 24px;background:rgba(255,255,255,.58);border:1px solid var(--line);box-shadow:var(--soft);position:relative;overflow:hidden}.show-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--gold),var(--rust))}
-    .show-date{text-align:center;border-right:1px solid rgba(23,40,42,.12);padding-right:20px}.show-date .month{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;font-weight:900;color:var(--rust)}.show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.35rem;line-height:.95;color:var(--tavern)}.show-date .year{display:block;font-size:.72rem;color:#756f63;margin-top:4px}
-    .show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.45rem;color:var(--tavern);line-height:1.1;margin-bottom:5px}.show-info span{display:block;color:#625f57;font-size:.94rem}.show-time{text-transform:uppercase;letter-spacing:.13em;font-size:.79rem;font-weight:900;color:var(--rust);white-space:nowrap}
-    .archive-toggle{margin-top:34px;display:inline-block;border:1px solid var(--tavern);background:transparent;color:var(--tavern);padding:12px 16px;border-radius:3px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.78rem;cursor:pointer}.archive-toggle:hover{background:rgba(16,40,43,.06)}
-    .past-wrap{display:none;margin-top:28px;padding-top:30px;border-top:1px solid var(--line)}.past-wrap.open{display:block}.past-wrap .show-row{opacity:.76}.past-wrap .show-row:before{background:#8c897f}.empty{padding:20px;background:rgba(255,255,255,.48);border:1px solid var(--line);color:#5f625d}
-    .booking-band{margin-top:52px;padding:28px;background:var(--tavern);color:var(--cream);display:flex;justify-content:space-between;gap:24px;align-items:center;box-shadow:var(--shadow)}.booking-band strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.65rem;color:#efd5a5}.booking-band span{display:block;color:#d7cdbd;margin-top:5px}.btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-weight:900;font-size:.78rem;padding:13px 17px;border-radius:3px;background:var(--rust);color:#fff;white-space:nowrap}
-    footer{padding:30px 0;background:#09191b;color:#c9bca7;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#efd5a5;text-decoration:none}
-    @media(max-width:650px){.wrap{width:min(100% - 26px,1060px)}.street-sign{min-width:160px;font-size:.78rem}.street-sign small{display:none}.navlinks a:not(:last-child){display:none}.hero{padding:56px 0 34px}.show-row{grid-template-columns:78px 1fr;gap:14px;padding:17px 15px 17px 18px}.show-date{padding-right:12px}.show-date .day{font-size:1.85rem}.show-time{grid-column:2;margin-top:-4px;font-size:.7rem}.show-info strong{font-size:1.16rem}.booking-band{display:block}.booking-band .btn{margin-top:18px}}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.58;background:radial-gradient(circle at 50% -10%, rgba(255,129,52,.18), transparent 24%),radial-gradient(circle at 20% 10%, rgba(255,77,160,.12), transparent 25%),linear-gradient(180deg,#0b0f1c 0%,#0d1022 52%,#0a0d18 100%)}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background:repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 92px),repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 92px)}
+    a{color:inherit}.wrap{width:min(1120px, calc(100% - 34px));margin:auto}
+    .topbar{background:rgba(7,10,20,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand-badge{display:inline-block;padding:12px 22px 10px;text-decoration:none;text-transform:uppercase;font-weight:900;letter-spacing:.11em;color:var(--cream);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:2px solid rgba(246,229,200,.88);border-radius:18px;position:relative;box-shadow:inset 0 0 0 2px rgba(255,77,160,.38),0 0 0 2px rgba(38,234,255,.28),var(--glow-pink),var(--glow-cyan);white-space:nowrap}
+    .brand-badge:before,.brand-badge:after{content:"";position:absolute;top:50%;width:10px;height:10px;border-radius:50%;transform:translateY(-50%);background:var(--cream);box-shadow:0 0 10px rgba(255,255,255,.65)}.brand-badge:before{left:12px}.brand-badge:after{right:12px}
+    .nav-links{display:flex;gap:18px;align-items:center;font-weight:800}.nav-links a{text-decoration:none;color:var(--gold)}
+    .hero{padding:74px 0 38px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:900;color:var(--gold);margin:0 0 12px}h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.1rem,7vw,5.8rem);line-height:.92;margin:0 0 16px;color:var(--cream)}.lead{font-size:1.12rem;max-width:800px;color:#dacdbb}
+    .panel{background:linear-gradient(180deg, rgba(17,22,40,.92), rgba(11,14,28,.92));border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow);position:relative;overflow:hidden}.panel:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,0) 35%),radial-gradient(circle at top right, rgba(255,77,160,.13), transparent 28%),radial-gradient(circle at bottom left, rgba(38,234,255,.12), transparent 24%)}.panel>*{position:relative;z-index:1}
+    .show-list{display:grid;gap:16px}.show-row{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;padding:22px 24px;border-radius:18px}.show-date{text-align:center;border-right:1px solid rgba(255,255,255,.12);padding-right:22px}.show-date .month{display:block;color:var(--pink);font-weight:900;letter-spacing:.18em;font-size:.7rem;text-transform:uppercase}.show-date .day{display:block;font-family:Georgia,'Times New Roman',serif;font-size:2.45rem;line-height:.95;color:var(--cream)}.show-date .year{display:block;font-size:.75rem;color:var(--muted);margin-top:5px}.show-info strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.42rem;line-height:1.08;margin-bottom:5px;color:var(--cream)}.show-info span{display:block;color:var(--muted);font-size:.95rem}.show-time{font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);white-space:nowrap}
+    section{padding:36px 0 82px}h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,4vw,3rem);line-height:1;margin:0 0 18px;color:var(--cream)}.subhead{margin:0 0 22px;color:#dacdbb;font-size:1.02rem}
+    .toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.09em;font-weight:900;font-size:.82rem;padding:15px 20px;border-radius:8px;border:1.5px solid transparent}.btn-primary{background:linear-gradient(180deg,var(--orange),#f36a34);color:#fff;box-shadow:0 0 16px rgba(255,151,64,.32),0 10px 24px rgba(0,0,0,.3)}.btn-ghost{border-color:rgba(38,234,255,.7);color:var(--cream);background:rgba(10,14,28,.35);box-shadow:0 0 14px rgba(38,234,255,.18)}
+    .archive{margin-top:26px}.archive-toggle{margin-top:24px}.archive-wrap{display:none;margin-top:18px}.archive-wrap.open{display:block}
+    footer{padding:32px 0;background:#090c16;color:#bfb29e;font-size:.86rem;border-top:1px solid rgba(255,255,255,.06)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--gold);text-decoration:none}
+    @media(max-width:760px){.show-row{grid-template-columns:100px 1fr;gap:18px}.show-time{grid-column:2}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1120px)}.nav{min-height:68px}.brand-badge{padding:10px 16px 9px;font-size:.8rem}.brand-badge:before,.brand-badge:after{width:8px;height:8px}.hero{padding:56px 0 26px}.show-row{grid-template-columns:1fr;gap:12px}.show-date{padding-right:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:14px}.show-time{grid-column:auto}}
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="wrap nav"><a class="street-sign" href="index.html">Heartland Mile<small>Chicago • Illinois</small></a><nav class="navlinks"><a href="song-list.html">Song List</a><a href="index.html#booking">Booking</a><a href="index.html">← Main site</a></nav></div></header>
-  <section class="hero"><div class="wrap"><p class="eyebrow">Live Shows</p><h1>See Heartland Mile live.</h1><p class="lead">Upcoming Chicagoland dates from Heartland Mile. Past dates move into the archive automatically after each show.</p></div></section>
-  <main class="wrap shows-wrap">
-    <section><h2 class="section-title">Upcoming Shows</h2><div class="show-list" id="upcomingShows"></div><div class="empty" id="noUpcoming" hidden>No upcoming dates are currently announced. Check back soon.</div></section>
-    <button class="archive-toggle" id="archiveToggle" type="button" hidden>View Previous Shows</button>
-    <section class="past-wrap" id="pastWrap"><h2 class="section-title">Previous Shows</h2><div class="show-list" id="pastShows"></div></section>
-    <div class="booking-band"><div><strong>Interested in booking Heartland Mile?</strong><span>Bars, breweries, patios, festivals, private events and opening slots.</span></div><a class="btn" href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking inquiry</a></div>
-  </main>
-  <footer><div class="wrap foot"><div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div><div><a href="song-list.html">Song List</a> &nbsp;•&nbsp; <a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking: seanhef@gmail.com</a></div></div></footer>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand-badge" href="index.html">Heartland Mile</a>
+      <div class="nav-links"><a href="song-list.html">Song List</a><a href="index.html">← Main Site</a></div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Shows</p>
+      <h1>Where to catch Heartland Mile live.</h1>
+      <p class="lead">Upcoming shows are listed first. Once a date passes, it drops into the Previous Shows archive automatically.</p>
+      <div class="toolbar"><a class="btn btn-primary" href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Book the band</a><a class="btn btn-ghost" href="song-list.html">View song list</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <h2>Upcoming Shows</h2>
+      <p class="subhead">Current public dates for Heartland Mile.</p>
+      <div class="show-list" id="upcomingShows"></div>
+      <p id="noUpcoming" hidden style="color:var(--muted);margin-top:12px">No upcoming shows are listed right now. Check back soon.</p>
+      <div class="archive">
+        <button id="archiveToggle" class="btn btn-ghost archive-toggle" hidden type="button">View Previous Shows</button>
+        <div id="pastWrap" class="archive-wrap">
+          <h2 id="previousShows">Previous Shows</h2>
+          <div class="show-list" id="pastShows"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Heartland Mile • Chicagoland, Illinois</div>
+      <div><a href="index.html">Main Site</a> &nbsp;•&nbsp; <a href="song-list.html">Song List</a> &nbsp;•&nbsp; <a href="mailto:seanhef@gmail.com?subject=Heartland%20Mile%20Booking%20Inquiry">Booking: seanhef@gmail.com</a></div>
+    </div>
+  </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const shows = [
-      {venue:'Life Bar Arcade', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T03:00:00-05:00'},
-      {venue:'Broken Hearts', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T02:00:00-06:00'},
+      {venue:'Life Bar Arcade', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T00:00:00-05:00'},
+      {venue:'Broken Hearts', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T00:00:00-06:00'},
       {venue:'Double Clutch Brewery', dateLabel:'Friday, April 16', month:'Apr', day:'16', year:'2027', time:'8:00 PM', end:'2027-04-17T02:00:00-05:00'}
     ];
     const now = new Date();
@@ -58,7 +82,7 @@
     const noUpcoming = document.getElementById('noUpcoming');
     function row(show){
       const article = document.createElement('article');
-      article.className = 'show-row';
+      article.className = 'panel show-row';
       article.innerHTML = `<div class="show-date"><span class="month">${show.month}</span><span class="day">${show.day}</span><span class="year">${show.year}</span></div><div class="show-info"><strong>${show.venue}</strong><span>${show.dateLabel}</span></div><div class="show-time">${show.time}</div>`;
       return article;
     }
