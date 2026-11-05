@@ -70,9 +70,10 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const shows = [
-      {venue:'Life Bar Arcade', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T00:00:00-05:00'},
-      {venue:'Broken Hearts', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T00:00:00-06:00'},
-      {venue:'Double Clutch Brewery', dateLabel:'Friday, April 16', month:'Apr', day:'16', year:'2027', time:'8:00 PM', end:'2027-04-17T02:00:00-05:00'}
+      {venue:'Life Bar Arcade', city:'Schaumburg, IL', dateLabel:'Saturday, October 24', month:'Oct', day:'24', year:'2026', time:'9:00 PM', end:'2026-10-25T00:00:00-05:00'},
+      {venue:'Life Bar Arcade', city:'Schaumburg, IL', dateLabel:'Saturday, December 12', month:'Dec', day:'12', year:'2026', time:'9:00 PM', end:'2026-12-13T00:00:00-06:00'},
+      {venue:'Broken Hearts', city:'Chicago, IL', dateLabel:'Sunday, December 27', month:'Dec', day:'27', year:'2026', time:'8:00 PM', end:'2026-12-28T00:00:00-06:00'},
+      {venue:'Double Clutch Brewery', city:'Evanston, IL', dateLabel:'Friday, April 16', month:'Apr', day:'16', year:'2027', time:'8:00 PM', end:'2027-04-17T02:00:00-05:00'}
     ];
     const now = new Date();
     const upcoming = document.getElementById('upcomingShows');
@@ -83,7 +84,7 @@
     function row(show){
       const article = document.createElement('article');
       article.className = 'panel show-row';
-      article.innerHTML = `<div class="show-date"><span class="month">${show.month}</span><span class="day">${show.day}</span><span class="year">${show.year}</span></div><div class="show-info"><strong>${show.venue}</strong><span>${show.dateLabel}</span></div><div class="show-time">${show.time}</div>`;
+      article.innerHTML = `<div class="show-date"><span class="month">${show.month}</span><span class="day">${show.day}</span><span class="year">${show.year}</span></div><div class="show-info"><strong>${show.venue}</strong><span>${show.city}</span><span>${show.dateLabel}</span></div><div class="show-time">${show.time}</div>`;
       return article;
     }
     shows.forEach(show => (now > new Date(show.end) ? past : upcoming).appendChild(row(show)));
